@@ -82,7 +82,7 @@ jQuery(function($) {
         }
 
         function closeControlExtras() {
-            console.log('bastards');
+            //console.log('bastards');
             $extraControls.removeClass(ACTIVE_CLASS);
         }
 
