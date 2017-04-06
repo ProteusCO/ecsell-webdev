@@ -62,6 +62,15 @@ div.window.dialog /*specificity*/ {
 		border-bottom-left-radius: $border-radius-lg;
 		border-bottom-right-radius: $border-radius-lg;
 		z-index: 502;
+
+		.btn.close {
+			background-image: none;
+			font-size: 1rem;
+			line-height: 1rem;
+			width: auto;
+			height: auto;
+			padding: .5rem .8rem;
+		}
 	}
 	.actions.bottom, .actions.top {
 		width: 100%;
