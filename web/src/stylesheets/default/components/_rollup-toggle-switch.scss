@@ -1,0 +1,71 @@
+@import "../config/base-vars";
+
+.roll-up-mode-toggle-switch {
+
+	input[checked=""] {
+		~ span {
+			&:before {
+				background-color: $btn-primary-bg;
+			}
+			&:after {
+				margin-left: 32px;
+			}
+		}
+	}
+
+	input[type="checkbox"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 65px;
+		height: 100%;
+		opacity: 0;
+		z-index: 999;
+		cursor: pointer;
+	}
+
+	> span:not(:empty) {
+		text-indent: 4.25rem;
+		overflow: visible;
+	}
+
+	> span {
+		display: block;
+		position: relative;
+		//cursor: pointer;
+		outline: none;
+		user-select: none;
+		z-index: 0;
+		padding: 2px;
+		width: 180px;
+		height: 30px;
+		background-color: #ddd;
+		border-radius: 60px;
+
+		&:before,
+		&:after {
+			display: block;
+			position: absolute;
+			top: -3px;
+			left: 1px;
+			bottom: 5px;
+			content: "";
+		}
+
+		&:before {
+			right: 1px;
+			background-color: #f1f1f1;
+			border-radius: 30px;
+			transition: background 0.3s;
+			width: 60px;
+		}
+
+		&:after {
+			width: 28px;
+			background-color: #fff;
+			border-radius: 100%;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+			transition: margin 0.3s;
+		}
+	}
+}
