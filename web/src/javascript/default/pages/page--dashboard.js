@@ -129,7 +129,7 @@ jQuery(function($) {
     $('.table-partition.primary th.label').textfill({
         minFontPixels: 8,
         maxFontPixels: 24,
-        debug: true
+        debug: false
     });
 
 });
