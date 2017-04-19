@@ -254,6 +254,10 @@ input[type=number]{
 /* FROM ECSELL / HABERFELD
    ========================================================================== */
 
+.report .prop-wrapper.prop-gen > .prop-body > .prop-group {
+	background-color: $color-white;
+}
+
 /* Prop-EditorViewer Generic Styles*/
 .prop-wrapper.prop-gen .props {
 	display: table;
