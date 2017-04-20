@@ -1,0 +1,305 @@
+.view {
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	button.btn {
+		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		float: right;
+		font-weight: 700;
+		font-family: $font-open-sans;
+		margin-bottom: 1rem;
+	}
+}
+
+.plans {
+	clear: both;
+	display: flex;
+	flex-flow: row wrap;
+
+	.plan-con {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 10px;
+		margin: 0 15px 20px 0;
+		border: 1px solid #eaeaea;
+		width: calc(33.33% - 15px);
+		box-sizing: border-box;
+		background-color: #f9f9f9;
+		border-radius: $border-radius-sm;
+
+		> div:last-child {
+			text-align: right;
+			flex: 0 1 auto;
+			align-self: flex-end;
+
+			.btn {
+				margin-bottom: .5rem;
+				float: none;
+				font-size: 12px;
+				padding: 3px 8px;
+
+				+ .btn {
+					margin-left: .5rem;
+				}
+			}
+		}
+	}
+
+	.questions {
+		display: block;
+		width: 100%;
+		flex: 1 0 auto;
+
+		.question {
+			display: block;
+			width: 100%;
+			margin-bottom: 1rem;
+
+			.label,
+			.val {
+				display: inline-block;
+				padding: 4px 10px;
+				vertical-align: top;
+				width: 50%;
+			}
+
+			.label {
+				font-weight: 600;
+			}
+
+			/*display: table-cell;
+			width: 50%;
+			font-family: $font-open-sans;
+			font-weight: 600;
+			vertical-align: middle;
+			text-align: left;*/
+		}
+	}
+
+	.toggles {
+		flex: 1 0 auto;
+
+		> div + div {
+			margin-top: 1rem;
+		}
+
+		label,
+		div.switcher-con {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+		}
+
+		label {
+			font-weight: 600;
+			padding: 4px 10px;
+		}
+
+		div.switcher-con {
+			padding: 0 10px;
+			width: calc(50% - 20px);
+			margin-left: 10px;
+		}
+	}
+}
+
+.activity-management .edit.plan {
+	padding: 1rem;
+	border: 1px solid #e5e5e5;
+}
+
+.edit.plan .form_entry {
+
+	.question {
+		+ .question {
+			margin-top: 1rem;
+		}
+
+		.form_field {
+			width: 100%;
+		}
+
+		.form_field + .form_field {
+			width: calc(50% - 10px);
+			text-align: right;
+			font-size: .8rem;
+			padding: 0;
+			margin-top: -.5rem;
+		}
+	}
+
+	.question .form_field {
+		display: block;
+		padding: 10px;
+
+		> .props {
+			display: block;
+			width: 100%;
+
+			label,
+			.val,
+			.extra_value_renderer_editable {
+				display: inline-block;
+				vertical-align: top;
+				width: 50%;
+			}
+
+			label {
+				margin-bottom: 0;
+			}
+
+			.extra_value_renderer_editable {
+				.select2-container {
+					margin-left: 10px;
+				}
+			}
+		}
+
+		> .val,
+		> .extra_value_renderer_editable {
+			display: inline-block;
+			vertical-align: top;
+			width: 50%;
+			margin-left: 10px;
+		}
+
+		> span.label {
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+			font-weight: 600;
+			text-align: right;
+			margin-right: 10px;
+		}
+
+		span.miwt-calendar {
+			padding: 0 10px 10px 0;
+			vertical-align: top;
+
+			input {
+				vertical-align: middle;
+			}
+
+			button.open {
+				height: 23px;
+				vertical-align: middle;
+			}
+		}
+
+		.button_description_container {
+
+			&.phone,
+			&.field,
+			&.yes,
+			&.no {
+				display: inline-block;
+				vertical-align: top;
+				margin-top: -2px;
+			}
+
+			&.phone,
+			&.field {
+				width: 11rem;
+			}
+
+			&.yes,
+			&.no {
+				width: 3.5rem;
+			}
+
+			label {
+				margin-bottom: 0;
+				padding: 0 0 0 5px;
+			}
+
+		}
+
+		.val,
+		.extra_value_renderer_editable {
+			max-width: 18rem;
+			padding: 0;
+		}
+
+		input[type="text"].val {
+			margin-left: 10px;
+			padding: 3px 5px;
+		}
+
+		.file_extra_upload_form {
+			padding: 5px 0;
+
+			input[type="file"] {
+				margin-left: 10px;
+				width: 100% !important;
+			}
+		}
+
+		label {
+			padding: 5px 10px;
+		}
+	}
+
+	.question.question-half {
+		section {
+			.prop-group-title,
+			.props {
+				display: inline-block;
+				vertical-align: top;
+				padding: 10px;
+				width: 50%;
+			}
+
+			.prop-group-title {
+				text-align: right;
+
+				h1 {
+					font-size: 14px;
+					font-weight: 600;
+				}
+			}
+
+			.props {
+				span.rtb,
+				span.ctb {
+					label {
+						display: inline-block;
+						vertical-align: middle;
+						padding: 0;
+						text-align: left;
+						font-weight: normal;
+						width: auto;
+						margin-bottom: 0;
+						margin-left: 5px;
+					}
+				}
+			}
+		}
+	}
+
+	span.submit_button {
+		display: block;
+		margin-left: 1%;
+		padding-left: 0;
+	}
+
+	.btn.save_exit_button {
+		@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+		font-weight: 700;
+		font-family: $font-open-sans;
+		margin-top: 1rem;
+		margin-left: 1%;
+	}
+}
+
+@media (max-width: 1023px) {
+	.plans {
+
+		.plan-con {
+			width: calc(50% - 15px);
+		}
+	}
+}
