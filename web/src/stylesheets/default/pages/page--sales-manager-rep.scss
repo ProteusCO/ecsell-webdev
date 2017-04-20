@@ -1,4 +1,10 @@
 @import "../config/base-vars";
+@import "../components/rollup-toggle-switch";
+
+.roll-up-mode-toggle-switch {
+	margin-top: 1.15rem;
+	position: relative;
+}
 
 .profile {
 	margin-bottom: 12px;

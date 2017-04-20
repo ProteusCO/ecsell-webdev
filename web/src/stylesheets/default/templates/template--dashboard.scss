@@ -1,1 +1,10 @@
+@import "../mixins/miwt-switch";
 @import "../components/dashboard";
+@import "../components/rollup-toggle-switch";
+
+.roll-up-mode-toggle-switch {
+  position: absolute;
+  top: 303px;
+  left: 275px;
+  z-index: 10;
+}
