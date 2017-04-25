@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('/_resources/dyn/files/8963z8187dfc1/_fn/OpenSans-Bold-webfont.ttf') format('truetype');
+  -fs-pdf-font-embed: embed;
+}
+
+@font-face {
+  font-family: 'OpenSansExtraBold';
+  src: url('/_resources/dyn/files/8967z86ea1bd8/_fn/OpenSans-ExtraBold-webfont.ttf') format('truetype');
+  -fs-pdf-font-embed: embed;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/_resources/dyn/files/8971z76928fac/_fn/OpenSans-Regular-webfont.ttf') format('truetype');
+  -fs-pdf-font-embed: embed;
+}
+
+@font-face {
+  font-family: 'OpenSansSemiBold';
+  src: url('/_resources/dyn/files/8975z71ff4bb5/_fn/OpenSans-Semibold-webfont.ttf') format('truetype');
+  -fs-pdf-font-embed: embed;
+}
+
+@page {
+  size: 8.75in 11.25in; /* 8.5x11 + 0.125 bleed area on each edge */
+  margin: 0.5in;
+  @bottom-right-corner {
+    content: counter(page);
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: OpenSans, Arial, sans-serif;
+}
+
+.rep-activity-main {
+  margin: 0in;
+  font-size: 14px;
+}
+
+.activity-info .left {
+  width: 4in;
+}
+
+.activity-info .right {
+  margin-left: 0.5in;
+  width: 3in;
+}
+
+.activity-info .label {
+  width: 1.75in;
+  text-align: right;
+}
+
+.activity-info .val {
+  width: 1.75in;
+  margin-left: 0.125in;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 26px;
+  font-family: OpenSansBold, Arial, sans-serif;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 10px;
+  margin-left: 0px;
+  font-family: OpenSansBold, Arial, sans-serif;
+}
+
+.question {
+  border-bottom: 1px solid #555555;
+}
+
+.question .label {
+  width: 4.00in;
+  text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.question .label > * {
+  text-align: right;
+}
+
+.question .val {
+  display: inline-block;
+  width: 4.25in;
+  margin-left: -2px !important;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.question .rtb + .rtb {
+  margin-left: 15px;
+}
+
+.question .rtb label {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 2px;
+}
+
+.question .ctb {
+  display: block;
+}
+
+.question .ctb label {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 0px 0px 9px;
+}
+
+.question .cb-field .ctb {
+  margin-bottom: 15px;
+}
+
+.question .label .secondary {
+  display: block;
+  font-size: 12px;
+}
+
+.activity-result-editor {
+  margin-bottom: 0.375in;
+}
+
+.question .caption {
+  font-size: 12px;
+}
+
+.activity {
+  padding: 0.1in 0;
+}
+
+.ecsell {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 186px;
+  height: 38px;
+}
+
+.joint-activity {
+  page-break-inside: avoid;
+}
