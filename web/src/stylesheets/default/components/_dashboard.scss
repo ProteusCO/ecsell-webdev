@@ -533,8 +533,12 @@
 	margin-left: 10px;
 }
 
-tr.joint-sales-calls .select2-container {
+tr.dash-row .select2-container {
 	margin-left: .5rem;
+}
+
+tr.joint-event-activity-categories .select2-container {
+	width: 140px !important;
 }
 
 .table-part .select2-container .select2-choice > .select2-chosen {
