@@ -43,6 +43,17 @@ div.message {
 		margin-top: 5px;
 	}
 
+	&.info {
+		background-color: #fffcb5;
+		border-color: #e5d3b3;
+		color: $font-default-color;
+		padding: 7px;
+
+		&::before {
+			display: none;
+		}
+	}
+
 	&.error {
 		@include style-message-error;
 	}

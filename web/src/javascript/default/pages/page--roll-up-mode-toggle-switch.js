@@ -27,5 +27,5 @@ jQuery(function($) {
 
         console.log(newUrl);
         window.location.href = newUrl;
-    })
-})
+    });
+});

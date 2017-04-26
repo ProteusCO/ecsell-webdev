@@ -197,6 +197,11 @@ p a {
 	}
 }
 
+input[type="checkbox"] {
+	width: auto !important;
+	height: auto !important;
+}
+
 .instructions {
 	padding-top: .75rem;
 	padding-bottom: .75rem;

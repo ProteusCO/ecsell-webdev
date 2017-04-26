@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+[#setting time_zone="UTC"]
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>${activity_instance.activity_name!""}</title>
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1079184ze998f091/_fn/joint-activity.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.oneupcoach.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="One-Up powered by EcSell Institute" class="ecsell"/><h1>${activity_instance.activity_name!""}</h1>
+        </div>
+    </div>
+</div>
+<table class='activity-info'>
+    <tr><td>
+        <table class='left'>
+            <tr>
+                <td class='label'>
+                    Status:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.status)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Sales Manager:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.sales_manager)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Sales Rep:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.for)!"Unknown"}
+                </td>
+            </tr>
+        </table></td><td>
+        <table class='right'>
+            <tr>
+                <td class='label'>
+                    Due Date:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.due_date)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Date Completed:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.date)!"Unknown"}
+                </td>
+            </tr>
+        </table></td></tr>
+</table>
+
+[#assign plans = (activity_instance.planForms)]
+[#list plans as plan]
+<div class="joint-activity" >
+    <div class="joint-activity-content" >
+        <h2 class="joint-event-company-name">${(plan.data.company_visited)!"Unknown"}</h2>
+
+        <div class="prop question">
+            <span class="label">Event Date</span>
+            <span class="val">
+                ${(plan.data.event_date?string("MMMM d, YYYY"))!""}
+            </span>
+        </div>
+        <div class="prop question">
+            <span class="label">Event Type</span>
+            <span class="val">${(plan.data.event_type)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Event Stage</span>
+            <span class="val">${(plan.data.event_stage)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Event Tracking</span>
+            <span class="val">${(plan.data.event_tracking)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Company Being Visited</span>
+            <span class="val">${(plan.data.company_visited)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Primary Meeting Contact</span>
+            <span class="val">${(plan.data.primary_contact)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Role in Meeting</span>
+            <span class="val">${(plan.data.manager_role)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Was the meeting scheduled with all parties with vested interest in what we do?
+                <br />
+                <span class="caption">Did you ask the question &quot;who else will have a stake in the conversation that we should consider including?&quot;</span></span>
+            <span class="val">${(plan.data.meeting_scheduled)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Meeting agenda provided to all attendees?</span>
+            <span class="val">${(plan.data.meeting_agenda_provided)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Meeting dress code</span>
+            <span class="val">${(plan.data.meeting_dress_code)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Pertinent company information researched prior to meeting<br />
+                <span class="caption">Company overview<br />
+                Industry threats they are facing<br />
+                Management changes- current/future<br />
+                Gains/losses in revenue past/current year<br />
+                Competitors</span></span>
+            <span class="val">${(plan.data.pertinent_company_info)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Goal of Meeting</span>
+            <span class="val">${(plan.data.goal_of_meeting)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Account Link (URL to CRM)</span>
+            <span class="val">${(plan.data.url)!"Unknown"}</span>
+        </div>
+
+    </div>
+</div>
+[/#list]
+</body>
+</html>
+
+<!--
+<div class="plan">
+    <span class="header">${activity_instance.activity_name!""}</span>
+    [#assign plans = (activity_instance.planForms)]
+    [#if plans?has_content]
+    <div class="plans">
+        Plans has records.
+    </div>
+    [/#if]
+    [#list plans as plan]
+    <div class="test">State: ${plan.createtime?string}</div>
+    [#assign companyVisited = (plan.data.company_visited)!""]
+    <div class="co_name">Company : ${companyVisited}</div>
+    [/#list]
+</div>
+-->
