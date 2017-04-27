@@ -83,45 +83,50 @@ jQuery(function($) {
         $con.find('.table-partition.primary .table-part').each(function() {
             var $table = $(this);
             var $allTableParts = $('.table-partition .table-part');
-            var $controlCell = $table.find('tr.joint-sales-calls td.label');
-            var $salesRows = $allTableParts.find('tr[data-joint-call-type="sales-stage"]');
-            var $trackedGoalsRows = $allTableParts.find('tr[data-joint-call-type="tracked-goal"]');
-            var $control;
-            var ACTIVE_CLASS = 'active';
 
-            if (!($controlCell.length && $salesRows.length && $trackedGoalsRows.length)) {
-                //No control row and not both types
-                return;
-            }
+            $table.find('tr.joint-sales-calls').each(function () {
+                var $controlRow = $(this);
+                var actId = $controlRow.data('joint-call-activity-id');
+                var $controlCell = $controlRow.find('td.label');
+                var $salesRows = $allTableParts.find('tr[data-joint-call-type="sales-stage-'+actId+'"]');
+                var $trackedGoalsRows = $allTableParts.find('tr[data-joint-call-type="tracked-goal-'+actId+'"]');
+                var $control;
+                var ACTIVE_CLASS = 'active';
 
-            function showSelectedSubrows() {
-                var controlType = $control.find('option:selected').data('type');
-
-                if (controlType == 'sales-stage') {
-                    $salesRows.addClass(ACTIVE_CLASS);
-                    $trackedGoalsRows.removeClass(ACTIVE_CLASS);
-                } else {
-                    $salesRows.removeClass(ACTIVE_CLASS);
-                    $trackedGoalsRows.addClass(ACTIVE_CLASS);
+                if (!($controlCell.length && $salesRows.length && $trackedGoalsRows.length)) {
+                    //No control row and not both types
+                    return;
                 }
-            }
 
-            $control = $(['<select class="joint-sales-type-chooser">',
-                '<option data-type="sales-stage">Sales Stage</option>',
-                '<option data-type="tracked-goal">Account Type</option>',
-                '</select>'].join(''))
-                .appendTo($controlCell)
-                .select2(/*{
-                    minimumResultsForSearch: -1,
-                    dropdownCss: { width: 110 }
-                }*/)
-                .on('change', showSelectedSubrows)
-                .on('select2-opening', function(evt) {
-                    //temp fix for https://github.com/ivaynberg/select2/issues/1541
-                    $(this).siblings('.select2-container').find('.select2-search, .select2-focusser').remove();
-                });
+                function showSelectedSubrows() {
+                    var controlType = $control.find('option:selected').data('type');
 
-            showSelectedSubrows();
+                    if (controlType == 'sales-stage') {
+                        $salesRows.addClass(ACTIVE_CLASS);
+                        $trackedGoalsRows.removeClass(ACTIVE_CLASS);
+                    } else {
+                        $salesRows.removeClass(ACTIVE_CLASS);
+                        $trackedGoalsRows.addClass(ACTIVE_CLASS);
+                    }
+                }
+
+                $control = $(['<select class="joint-sales-type-chooser">',
+                    '<option data-type="sales-stage">Sales Stage</option>',
+                    '<option data-type="tracked-goal">Account Type</option>',
+                    '</select>'].join(''))
+                    .appendTo($controlCell)
+                    .select2(/*{
+                     minimumResultsForSearch: -1,
+                     dropdownCss: { width: 110 }
+                     }*/)
+                    .on('change', showSelectedSubrows)
+                    .on('select2-opening', function (evt) {
+                        //temp fix for https://github.com/ivaynberg/select2/issues/1541
+                        $(this).siblings('.select2-container').find('.select2-search, .select2-focusser').remove();
+                    });
+
+                showSelectedSubrows();
+            });
         });
 
 
@@ -167,7 +172,7 @@ jQuery(function($) {
                     $subRows.each(function() {
                         $subRow = $(this);
                         $subRow.removeClass(ACTIVE_CLASS);
-                        console.log($subRow.data('joint-event-plan-stage'));
+                        //console.log($subRow.data('joint-event-plan-stage'));
                         if ($subRow.data('joint-event-plan-stage') == controlType) {
                             $subRow.addClass(ACTIVE_CLASS);
                         }
