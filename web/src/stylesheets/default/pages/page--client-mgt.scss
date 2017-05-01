@@ -1271,6 +1271,15 @@ div.window.dialog.property_wrapper {
 	.prop-wrapper.prop-gen {
 		padding: 1.5rem 1rem 1rem;
 		border: 1px solid #e5e5e5;
+
+		&.settings.prop-viewer {
+			+ .settings.prop-viewer {
+				margin-top: -1rem;
+				background: $color-white;
+				border-top: 1px solid $color-white;
+				padding-top: 0;
+			}
+		}
 	}
 
 	.prop-wrapper.prop-gen .resource-ui {
