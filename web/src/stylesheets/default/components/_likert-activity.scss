@@ -1,0 +1,142 @@
+/*.big-day-survey .viewer > div > label,
+.big-day-survey .wizard_procedure_step_header {
+	background: #062b47 none repeat scroll 0 0;
+	border-radius: 3px;
+	color: #ffffff;
+	font-family: $font-open-sans;
+	font-weight: 700;
+	font-size: 18px;
+	height: 50px;
+	margin: 2rem 0 .5rem;
+	padding: 12px 0 0 10px;
+	display: block;
+	width: 100%;
+}
+.big-day-survey .question h1,
+.big-day-survey .question h2 {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.big-day-survey .question h3 {
+	margin: 0;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.big-day-survey .viewer > div div .question {
+	padding: 10px;
+}
+
+.big-day-survey .viewer > div div .question .form_field {
+	width: 100%;
+}
+
+.big-day-survey .viewer > div div .question .form_field span.label,
+.big-day-survey .viewer > div div .question .form_field .extra_value_renderer {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.big-day-survey .viewer > div div .question .form_field span.label {
+	width: 65%;
+}
+
+.big-day-survey .viewer > div div .question .form_field .extra_value_renderer {
+	width: 35%;
+	text-align: right;
+}
+
+.big-day-survey .viewer > div div .question:nth-of-type(2n) {
+	background: #f3f4f5;
+}
+
+.big-day-survey .viewer > div div .question + .question {
+	margin-bottom: 5px;
+}*/
+
+/* BIG DAY SURVEY FORM ENTRY */
+.wizard_category_navigator_node {
+	color: $color-hab-orange;
+	margin: 8px 0;
+}
+
+.wizard_procedure_step {
+	> .wizard_step_navigator {
+		display: none;
+	}
+}
+
+.wizard_procedure_step_header {
+	margin: 1rem 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.wizard_procedure .question {
+	margin-bottom: 1.25rem;
+}
+
+.wizard_procedure .question .form_field {
+	display: block;
+}
+
+.wizard_procedure .question .form_field {
+	h2, h3 {
+		font-size: 16px;
+		font-weight: 600;
+		margin: 0 0 .5rem;
+	}
+}
+
+.wizard_procedure .question .form_field table.extra_value_renderer {
+	margin-bottom: 1.25rem;
+}
+
+.wizard_procedure span.label {
+	display: block;
+	margin-bottom: .35rem;
+	font-weight: 600;
+}
+
+.wizard_procedure .choice {
+	margin-bottom: 3px;
+}
+
+.wizard_procedure label.tbl {
+	margin-left: 5px;
+}
+
+.btn.next-button {
+	margin-left: 1rem;
+}
+
+.likert tr:nth-child(2) {
+	display: none;
+}
+
+td.likert_label-con,
+td.likert_option-con {
+	text-align: center;
+	width: 5rem;
+	vertical-align: top;
+}
+
+td.likert_label-con {
+	padding-bottom: 5px;
+}
+
+td.likert_label-con label.tbl {
+	margin-left: 0;
+	font-size: 12px;
+}
+
+.wizard_procedure .disabled-con .btn[disabled="disabled"] {
+	opacity: .5;
+	cursor: default;
+}
+
+.wizard_procedure .disabled-con .btn[disabled="disabled"]:hover {
+	background: $color-hab-orange;
+	border: darken($color-hab-orange, 5%);
+}
