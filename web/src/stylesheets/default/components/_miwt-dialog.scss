@@ -366,6 +366,26 @@ div.window.dialog /*specificity*/ {
 
 	}
 
+	.next-editor {
+		.miwt-calendar button.open {
+			line-height: 0;
+			vertical-align: middle;
+		}
+	}
+
+	.position.selector {
+		margin-bottom: 1.5rem;
+
+		label {
+			display: block;
+			margin-bottom: 0;
+		}
+
+		.select2-container {
+			max-width: 100%;
+		}
+	}
+
 }
 
 @media (max-width: 767px) {
