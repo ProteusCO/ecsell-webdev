@@ -2,7 +2,7 @@
 [#setting time_zone="UTC"]
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <title>${activity_instance.activity_name!""}</title>
+    <title>${(activity_instance.activity_name)!""}</title>
     <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1079184ze998f091/_fn/joint-activity.css" type="text/css" />
 </head>
 <body>
@@ -16,28 +16,28 @@
 <table class='activity-info'>
     <tr><td>
         <table class='left'>
-            <tr>
+            <!--<tr>
                 <td class='label'>
                     Status:
                 </td>
                 <td class='val'>
                     ${(activity_instance.status)!"Unknown"}
                 </td>
+            </tr>-->
+            <tr>
+                <td class='label'>
+                    Team Leader:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.by.name.first)!"Unknown"} ${(activity_instance.by.name.last)!"Unknown"}
+                </td>
             </tr>
             <tr>
                 <td class='label'>
-                    Sales Manager:
+                    Team Member:
                 </td>
                 <td class='val'>
-                    ${(activity_instance.sales_manager)!"Unknown"}
-                </td>
-            </tr>
-            <tr>
-                <td class='label'>
-                    Sales Rep:
-                </td>
-                <td class='val'>
-                    ${(activity_instance.for)!"Unknown"}
+                    ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
                 </td>
             </tr>
         </table></td><td>
@@ -62,51 +62,51 @@
 </table>
 <div class="joint-activity" >
     <div class="joint-activity-content" >
-        <h2 class="joint-event-company-name">${(joint_event_plan.data.company_visited)!"Unknown"}</h2>
+        <h2 class="joint-event-company-name">${(joint_activity_plan.data.company_visited)!"Unknown"}</h2>
 
         <div class="prop question">
             <span class="label">Event Date</span>
             <span class="val">
-                ${(joint_event_plan.data.event_date?string("MMMM d, YYYY"))!"Unknown"}
+                ${(joint_activity_plan.data.event_date?string("MMMM d, YYYY"))!"Unknown"}
             </span>
         </div>
         <div class="question">
             <span class="label">Event Type</span>
-            <span class="val">${(joint_event_plan.data.event_type)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.type)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Event Stage</span>
-            <span class="val">${(joint_event_plan.data.event_stage)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.stage)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Event Tracking</span>
-            <span class="val">${(joint_event_plan.data.event_tracking)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.tracking)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Company Being Visited</span>
-            <span class="val">${(joint_event_plan.data.company_visited)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.company_visited)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Primary Meeting Contact</span>
-            <span class="val">${(joint_event_plan.data.primary_contact)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.primary_contact)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Role in Meeting</span>
-            <span class="val">${(joint_event_plan.data.manager_role)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.manager_role)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Was the meeting scheduled with all parties with vested interest in what we do?
                 <br />
                 <span class="caption">Did you ask the question &quot;who else will have a stake in the conversation that we should consider including?&quot;</span></span>
-            <span class="val">${(joint_event_plan.data.meeting_scheduled)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.meeting_scheduled)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Meeting agenda provided to all attendees?</span>
-            <span class="val">${(joint_event_plan.data.meeting_agenda_provided)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.agenda_provided)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Meeting dress code</span>
-            <span class="val">${(joint_event_plan.data.meeting_dress_code)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.dress_code)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Pertinent company information researched prior to meeting<br />
@@ -115,15 +115,15 @@
                 Management changes- current/future<br />
                 Gains/losses in revenue past/current year<br />
                 Competitors</span></span>
-            <span class="val">${(joint_event_plan.data.pertinent_company_info)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.pertinent_company_info)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Goal of Meeting</span>
-            <span class="val">${(joint_event_plan.data.goal_of_meeting)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.meeting_goal)!"Unknown"}</span>
         </div>
         <div class="question">
             <span class="label">Account Link (URL to CRM)</span>
-            <span class="val">${(joint_event_plan.data.url)!"Unknown"}</span>
+            <span class="val">${(joint_activity_plan.data.url)!"Unknown"}</span>
         </div>
 
     </div>
@@ -134,8 +134,8 @@
 <!--
 <div class="plan">
     <span class="header">${activity_instance.activity_name!""}</span>
-    <div class="test">Submitted: ${joint_event_plan.submitted?string}</div>
-    <div class="test">State: ${joint_event_plan.createtime?string}</div>
-    [#assign companyVisited = (joint_event_plan.data.company_visited)!""]
+    <div class="test">Submitted: ${joint_activity_plan.submitted?string}</div>
+    <div class="test">State: ${joint_activity_plan.createtime?string}</div>
+    [#assign companyVisited = (joint_activity_plan.data.company_visited)!""]
     <div class="co_name">Company : ${companyVisited}</div>
 </div>-->
