@@ -259,6 +259,10 @@
 	width: 100%;
 }
 
+.full-view .table-partition .table-part {
+	background: #d6d6d6;
+}
+
 /* table part collapsible */
 .table-part.closed  {
 	border-bottom: 3px solid #fff;
@@ -297,6 +301,9 @@
 }
 
 /* table part generic */
+.table-part thead {
+	background-color: #333639;
+}
 .table-part th {
 	background-color: #333639;
 	color: #fff;
@@ -331,10 +338,8 @@
 	border: 1px solid #d6d6d6;
 	height: 45px;
 	padding: 0 10px;
-	-webkit-transition: background-color 0.1s;
-	-moz-transition: background-color 0.1s;
-	-ms-transition: background-color 0.1s;
 	transition: background-color 0.1s;
+	background-clip: padding-box;
 }
 
 .table-part tr.odd td {

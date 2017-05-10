@@ -23,6 +23,13 @@ button.btn {
 	text-align: right;
 }
 
+/* SHOW/HIDE CLIENT MANAGEMENT SEARCH */
+.ui-task-manager-con.actions {
+	.btn.middle-container-show-hide {
+		margin: .35rem 0 1.15rem;
+	}
+}
+
 .prop-wrapper.prop-gen {
 	&.company-visibility-setting-viewer,
 	&.company-emails {
@@ -1271,6 +1278,15 @@ div.window.dialog.property_wrapper {
 	.prop-wrapper.prop-gen {
 		padding: 1.5rem 1rem 1rem;
 		border: 1px solid #e5e5e5;
+
+		&.settings.prop-viewer {
+			+ .settings.prop-viewer {
+				margin-top: -1rem;
+				background: $color-white;
+				border-top: 1px solid $color-white;
+				padding-top: 0;
+			}
+		}
 	}
 
 	.prop-wrapper.prop-gen .resource-ui {

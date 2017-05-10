@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Sales Activity Calculator</title>
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/14191z6fe4deed/_fn/salesactivitycalculator.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.oneupcoach.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="One-Up powered by EcSell Institute" class="ecsell"/><h1>Sales Activity Calculator</h1>
+        </div>
+    </div>
+</div>
+<div class="sac" >
+    <div class="activity-calc" >
+        <div class="header" >
+            <h2>Success Formula Worksheet</h2>
+            <span class="label directions">Directions:</span><span class="val directions">The way you use your time each day is a critical factor to success. Determining your personal Success Formula provides you with concrete numbers in order to set your goals. Fill in the following numbers to calculate the number of people you must contact and convert in order to achieve YOUR desired level of success.</span>
+        </div>
+        <table class="sac-section">
+            <thead>
+            <tr class="section-label question">
+                <th class="title label">Success Formular Part I - Personal Income Goal </th><th class="val"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="question dollars">
+                <td class="label">A - My 12 month personal income goal is</td><td class="val">$ ${(sfw.data.personal_income_goal)!"Unknown"}</td>
+            </tr>
+            <tr class="question dollars">
+                <td class="label">B - My current salary / income level is</td><td class="val">$ ${(sfw.data.current_salary)!"Unknown"}</td>
+            </tr>
+            <tr class="question dollars">
+                <td class="label">C - Additional income I must generate (a-b)</td><td class="val">$ ${(sfw.data.additional_income)!"Unknwown"}</td>
+            </tr>
+            <tr class="question dollars">
+                <td class="label">D - My average sale generates ________ income to me</td><td class="val">$ ${(sfw.data.average_sale)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">E - I need ______ sales to hit my personal goal</td><td class="val">${(sfw.data.personal_income_goal)!"Unknown"}</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="sac-section">
+            <thead>
+            <tr class="section-label question">
+                <th class="title label">Success Formular Part II - Critical Ratios</th><th class="val"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="question">
+                <td class="label">F - My presentation to close percentage is</td><td class="val">${(sfw.data.present_close)!"Unknown"}%</td>
+            </tr>
+            <tr class="question">
+                <td class="label">H - My opportunity to presentation percentage is</td><td class="val">${(sfw.data.opp_preso)!"Unknown"}%</td>
+            </tr>
+            <tr class="question">
+                <td class="label">J - My appointment to opportunity percentage is</td><td class="val">${(sfw.data.appt_opp)!"Unknown"}%</td>
+            </tr>
+            <tr class="question">
+                <td class="label">L - My phone contact to appointment percentage is</td><td class="val">${(sfw.data.contact_appt)!"Unknown"}%</td>
+            </tr>
+            <tr class="question">
+                <td class="label">N - My ‘dials’ to phone contact percentage is</td><td class="val">${(sfw.data.dials_phone)!"Unknown"}%</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="sac-section">
+            <thead>
+            <tr class="section-label question">
+                <th class="title label">Success Formular Part III - Activity Required</th><th class="val"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="question">
+                <td class="label">G - # of presentations I must make (E/F)</td><td class="val">${(sfw.data.no_preso)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">I - # of opportunities I must have (G/H)</td><td class="val">${(sfw.data.no_opp)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">K - # of appointments I must have (I/J)</td><td class="val">${(sfw.data.no_apt)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">M - # of phone contacts I must have (K/L)</td><td class="val">${(sfw.data.no_phone)!"Unknown"}</td>
+            </tr>
+            <tr class="question">
+                <td class="label">O - # of dials I must make daily (M/N)/240</td><td class="val">${(sfw.data.no_dials)!"Unknown"}</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="sac-summary">
+            <tr class="summary">
+                <td class="val">Based on O x N, you would only talk to ${(sfw.data.ppl_per_day)!"Unknown"} people / person per day</td>
+                <td class="val">It would take me ${(sfw.data.time_per_conversation)!"Unknown"} minutes to have one conversation.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
