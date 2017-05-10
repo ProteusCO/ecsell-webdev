@@ -79,7 +79,13 @@
 .search-wrapper .result-actions {
 	text-align: right;
 	display: block;
-	padding: 10px 0;
+	margin: -1rem 0 10px;
+	padding: 0 0 10px;
+
+	label {
+		display: block;
+		margin-bottom: 0;
+	}
 }
 
 /* Results Table
