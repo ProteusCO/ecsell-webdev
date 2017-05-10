@@ -23,6 +23,13 @@ button.btn {
 	text-align: right;
 }
 
+/* SHOW/HIDE CLIENT MANAGEMENT SEARCH */
+.ui-task-manager-con.actions {
+	.btn.middle-container-show-hide {
+		margin: .35rem 0 1.15rem;
+	}
+}
+
 .prop-wrapper.prop-gen {
 	&.company-visibility-setting-viewer,
 	&.company-emails {
