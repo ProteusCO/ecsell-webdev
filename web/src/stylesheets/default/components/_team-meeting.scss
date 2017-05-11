@@ -1,0 +1,53 @@
+@import "../../../../../bower_components/bootstrap/scss/mixins";
+@import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
+@import "../../../../../bower_components/bootstrap/scss/buttons";
+
+.one-to-one-attachment-viewer {
+
+	.actions.upload {
+		.btn {
+			margin-left: calc(50% + 10px);
+		}
+	}
+
+	.file-row  {
+		clear: left;
+		float: left;
+		width: 90%;
+
+		+ .file-row {
+			margin-top: .75rem;
+		}
+
+		.delete {
+			display: block;
+			float: right;
+			margin-right: 10px;
+			@include button-variant($color-app-red, $color-white, $color-app-red);
+		}
+	}
+}
+
+.activity-management {
+	.prop-wrapper.prop-gen {
+
+		&.team-meeting-viewer,
+		&.team-meeting-editor {
+
+			.prop.tracked {
+
+				.cb-field .ctb.label-after {
+					display: block;
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		&.team-meeting-viewer {
+
+			> .prop-footer .prop-footer-actions {
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.activity-management {
+
+	.re h3 {
+		font-size: 1.15rem;
+		padding: 0 .5rem;
+	}
+}
+
+.team-retreat-summary {
+	.prop-header .prop-header-actions .actions.persistence-actions {
+		margin-bottom: 1rem;
+	}
+
+	.prop-body {
+		margin: 0 0 1rem;
+
+		.prop.summary {
+			.val {
+				width: 50%;
+			}
+
+			textarea {
+				width: 100%;
+				height: 6rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.team-retreat-summary {
+		.prop-body {
+			margin: 1rem 0;
+
+			.prop.summary {
+				.val {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
