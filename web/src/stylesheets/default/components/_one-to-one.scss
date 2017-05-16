@@ -2,21 +2,30 @@
 @import "../../../../../bower_components/bootstrap/scss/mixins/buttons";
 @import "../../../../../bower_components/bootstrap/scss/buttons";
 
-.one-to-one-attachment-viewer .file-row  {
-	clear: left;
-	float: left;
-	width: 90%;
+.one-to-one-attachment-viewer {
 
-	+ .file-row {
-		margin-top: .75rem;
+	.actions.upload {
+		.btn {
+			margin-left: calc(50% + 10px);
+		}
 	}
-}
 
-.one-to-one-attachment-viewer .file-row .delete {
-	display: block;
-	float: right;
-	margin-right: 10px;
-	@include button-variant($color-app-red, $color-white, $color-app-red);
+	.file-row  {
+		clear: left;
+		float: left;
+		width: 90%;
+
+		+ .file-row {
+			margin-top: .75rem;
+		}
+
+		.delete {
+			display: block;
+			float: right;
+			margin-right: 10px;
+			@include button-variant($color-app-red, $color-white, $color-app-red);
+		}
+	}
 }
 
 .prop-wrapper.prop-gen .prop .ctb label {

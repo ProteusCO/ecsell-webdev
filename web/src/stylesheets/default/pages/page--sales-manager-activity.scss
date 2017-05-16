@@ -14,10 +14,17 @@
 @import "../components/coaching-skill-review-notify";
 @import "../components/joint-activity";
 @import "../components/likert-activity";
+@import "../components/team-meeting";
+@import "../components/team-retreat";
 
 .activity-management {
 	.prop-wrapper .prop-header-title {
 		margin: 0;
+	}
+
+	.re h3 {
+		font-size: 1.15rem;
+		padding: 0 .5rem;
 	}
 }
 

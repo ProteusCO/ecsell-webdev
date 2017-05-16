@@ -12,6 +12,51 @@
         </div>
     </div>
 </div>
+<table class='activity-info'>
+    <tr><td><table class='left'>
+        <tr>
+            <td class='label'>
+                Status:
+            </td>
+            <td class='val'>
+                ${(activity_instance.status)!"Unknown"}
+            </td>
+        </tr>
+        <tr>
+            <td class='label'>
+                ${(activity_instance.by.position)!"Manager"}:
+            </td>
+            <td class='val'>
+                ${(activity_instance.by.name.first)!"Unknown"} ${(activity_instance.by.name.last)!"Unknown"}
+            </td>
+        </tr>
+        <tr>
+            <td class='label'>
+                Team Member:
+            </td>
+            <td class='val'>
+                ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+            </td>
+        </tr>
+    </table></td><td><table class='right'>
+        <tr>
+            <td class='label'>
+                Due Date:
+            </td>
+            <td class='val'>
+                ${(activity_instance.due_date)!"Unknown"}
+            </td>
+        </tr>
+        <tr>
+            <td class='label'>
+                Date Completed:
+            </td>
+            <td class='val'>
+                ${(activity_instance.date)!"Unknown"}
+            </td>
+        </tr>
+    </table></td></tr>
+</table>
 <div class="sac" >
     <div class="activity-calc" >
         <div class="header" >
