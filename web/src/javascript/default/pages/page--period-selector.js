@@ -23,16 +23,16 @@ jQuery(function($) {
             var selected = $(this).val();
             var name = $('.control > select').attr('name');
 
-            console.log(selected);
+            //console.log(selected);
 
             if( $(this).val() == 'cr' ) {
-                console.log("yay cycle");
+                //console.log("yay cycle");
                 $dateRange.removeClass(ACTIVE_CLASS);
                 $cycleRange.addClass(ACTIVE_CLASS);
 
                 return;
             } else if ( $(this).val() == 'cmr' ) {
-                console.log("yay month");
+                //console.log("yay month");
                 $cycleRange.removeClass(ACTIVE_CLASS);
                 $dateRange.addClass(ACTIVE_CLASS);
 
@@ -53,10 +53,10 @@ jQuery(function($) {
             $extraControls.removeClass(ACTIVE_CLASS);
             window.location.href = newUrl;
         }).on('select2:open', function(){
-            console.log('selected open');
+            //console.log('selected open');
 
             if( $(this).val() == 'cr' ) {
-                console.log('value = cr');
+                //console.log('value = cr');
 
                 if (!$('.cycle-range').hasClass(ACTIVE_CLASS)) {
                     $('.cycle-range').addClass(ACTIVE_CLASS);
@@ -64,7 +64,7 @@ jQuery(function($) {
 
                 return;
             } else if ( $(this).val() == 'cmr' ) {
-                console.log("yay month");
+                //console.log("yay month");
                 $cycleRange.removeClass(ACTIVE_CLASS);
                 $dateRange.addClass(ACTIVE_CLASS);
 
@@ -82,7 +82,6 @@ jQuery(function($) {
         }
 
         function closeControlExtras() {
-            //console.log('bastards');
             $extraControls.removeClass(ACTIVE_CLASS);
         }
 
