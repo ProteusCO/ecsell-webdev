@@ -229,7 +229,24 @@
 			width: 100%;
 
 			input {
-				width: inherit;
+				width: calc(100% - 31px);
+				cursor: text;
+
+				&:hover {
+					cursor: text;
+				}
+			}
+
+			.cal,
+			.cycle-icon {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 6px;
+				cursor: pointer;
+
+				i {
+					font-size: 1.5rem;
+				}
 			}
 		}
 
@@ -237,9 +254,10 @@
 		&.cycle-range {
 			label {
 				display: block;
+				margin-bottom: 0;
 			}
-			.question + .question {
-				margin-top: 5px;
+			.question {
+				margin-bottom: 8px;
 			}
 		}
 
