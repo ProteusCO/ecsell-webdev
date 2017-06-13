@@ -4,8 +4,6 @@
 
 jQuery(function($) {
 
-    $('.control > select').select2();
-
     $('.period-selector').each(function() {
         var $con = $(this);
         var $form = $con.find('form');
@@ -18,6 +16,8 @@ jQuery(function($) {
         var $activeExtraControl;
         var $cycleRange = $con.find('.control-extra.cycle-range');
         var $dateRange = $con.find('.control-extra.date-range');
+
+        $submit.val('Submit');
 
         $('.control > select').on('change', function() {
             var selected = $(this).val();
@@ -106,7 +106,9 @@ jQuery(function($) {
         $extraControls.filter('.date-range').each(function() {
             var $dateCon = $(this);
             var $dateFields = $dateCon.find('.question input');
+            var $dstartCon = $dateCon.find('.start .val');
             var $dstart = $dateCon.find('.start input');
+            var $dendCon = $dateCon.find('.end .val');
             var $dend = $dateCon.find('.end input');
             var dstartVal = $dstart.val();
             var dendVal = $dend.val();
@@ -116,12 +118,45 @@ jQuery(function($) {
             var $monthPicker = $dateCon.find('.month-picker');
             var DATE_PARSE_FORMAT = 'YYYY-MM';
             var DATE_OUTPUT_FORMAT = 'MMM YYYY';
+            var dstartValYear = dstartVal.substr(0, 4);
+            var dendValYear = dendVal.substr(0, 4);
+            var dstartValPlus = +dstartVal.toString().split('').pop() + 1;
+            var dendValPlus = +dendVal.toString().split('').pop() + 1;
+            var dstartValCorrected = dstartValYear + '-' + dstartValPlus;
+            var dendValCorrected = dendValYear + '-' + dendValPlus;
+            var dstartValFormatted = moment(dstartValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
+            var dendValFormatted = moment(dendValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
             var today = new Date();
+
+            //Append calendar icon to custom month range input container
+            $dstartCon.append('<span class="start-cal cal"><i class="fa fa-calendar" aria-hidden="true"></i></span>');
+            $dendCon.append('<span class="end-cal cal"><i class="fa fa-calendar" aria-hidden="true"></i></span>');
+
+            var $dateCal = $('span.cal');
+
+            //Make the date fields readonly so people can't keyspam
+            $dateFields.attr('readonly', true);
+
+            if(!$dstart.attr('value')) {
+                $dstart.addClass('no-value');
+            } else {
+                $dstart.val(dstartValFormatted);
+            }
+
+            if(!$dend.attr('value')) {
+                $dend.addClass('no-value');
+            } else {
+                $dend.val(dendValFormatted);
+            }
 
             var lastFocus = [];
             $dateFields.on('focus', function(){
                 $monthPicker.addClass(ACTIVE_CLASS);
                 lastFocus = $(this);
+            });
+
+            $dateCal.on('click', function(){
+                var focusedEl = $(this).closest('.val').find('input').focus();
             });
 
             $yearSelect.on('change', function(event){
@@ -151,9 +186,9 @@ jQuery(function($) {
 
             if (dstartVal.length) {
                 displayString += 'Custom: ';
-                displayString += moment(dstartVal, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
+                displayString += moment(dstartValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT);
                 displayString += ' - ';
-                displayString += (dendVal.length ? moment(dendVal, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT) : 'Present');
+                displayString += (dendVal.length ? moment(dendValCorrected, DATE_PARSE_FORMAT).format(DATE_OUTPUT_FORMAT) : 'Present');
 
                 $control.find('option[data-extra-control-key="'+$dateCon.data('extraControl')+'"]').each(function() {
                     $(this).text(displayString);
@@ -194,16 +229,31 @@ jQuery(function($) {
         $extraControls.filter('.cycle-range').each(function() {
             var $dateCon = $(this);
             var $dateFields = $dateCon.find('.question input');
+            var $dstartWrap = $dateCon.find('.start .val');
             var $dstart = $dateCon.find('.start input');
+            var $dendWrap = $dateCon.find('.end .val');
             var $dend = $dateCon.find('.end input');
             var $yearSelect = $dateCon.find('.year-select select');
             var $selectionContainer = $dateCon.find('.selection-container');
             var $cyclePicker = $dateCon.find('.cycle-picker');
 
+            //Append calendar icon to custom month range input container
+            $dstartWrap.append('<span class="start-cycle cycle-icon"><i class="fa fa-refresh" aria-hidden="true"></i></span>');
+            $dendWrap.append('<span class="end-cycle cycle-icon"><i class="fa fa-refresh" aria-hidden="true"></i></span>');
+
+            var $dateCal = $('span.cycle-icon');
+
+            //Make the date fields readonly so people can't keyspam
+            $dateFields.attr('readonly', true);
+
             var lastFocus = [];
             $dateFields.on('focus', function(){
                 $cyclePicker.addClass(ACTIVE_CLASS);
                 lastFocus = $(this);
+            });
+
+            $dateCal.on('click', function(){
+                $(this).closest('.val').find('input').focus();
             });
 
             $yearSelect.on('change', function(event){
@@ -313,5 +363,9 @@ jQuery(function($) {
         }
 
         showControlExtra();
+    });
+
+    $('.control > select').select2({
+        minimumResultsForSearch: 20
     });
 });
