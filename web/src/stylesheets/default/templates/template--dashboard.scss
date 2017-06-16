@@ -8,3 +8,15 @@
   left: 275px;
   z-index: 10;
 }
+
+//TEMP FIX FOR ECSELL-548
+.table-part tr.odd {
+  &.joint-event-activity-event-date td.label {
+    padding-left: 20px;
+
+    &::before {
+      content: '-';
+      margin-right: 5px;
+    }
+  }
+}
