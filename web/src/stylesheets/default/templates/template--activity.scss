@@ -1,5 +1,12 @@
 @import "../components/activities";
 
+//hide "Step" titles
+.wizard_category_navigator {
+  .wizard_category_navigator_node_step {
+    display: none;
+  }
+}
+
 .activity-management {
   > .actions a.btn {
     background: transparent;

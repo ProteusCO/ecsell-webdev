@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+[#setting time_zone="UTC"]
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>${(activity_instance.activity_name)!""}</title>
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1079184ze998f091/_fn/joint-activity.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.oneupcoach.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="One-Up powered by EcSell Institute" class="ecsell"/><h1>${activity_instance.activity_name!""}</h1>
+        </div>
+    </div>
+</div>
+<table class='activity-info'>
+    <tr><td>
+        <table class='left'>
+            <tr>
+                <td class='label'>
+                    ${(activity_instance.by.position)!"Manager"}:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.by.name.first)!"Unknown"} ${(activity_instance.by.name.last)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Team Member:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+                </td>
+            </tr>
+        </table></td><td>
+        <table class='right'>
+            <tr>
+                <td class='label'>
+                    Due Date:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.due_date)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Date Completed:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.date)!"Unknown"}
+                </td>
+            </tr>
+        </table></td></tr>
+</table>
+
+[#assign plans = (activity_instance.planForms)]
+[#list plans as plan]
+<div class="joint-activity" >
+    <div class="joint-activity-content" >
+        <h2 class="joint-event-company-name">${(plan.data.company_visited)!"Unknown"}</h2>
+
+        <div class="prop question">
+            <span class="label">Date</span>
+            <span class="val">
+                ${(plan.data.event_date?string("MMMM d, YYYY"))!""}
+            </span>
+        </div>
+        <div class="prop question">
+            <span class="label">Company Being Visited</span>
+            <span class="val">${(plan.data.company_visited)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Primary Contact</span>
+            <span class="val">${(plan.data.Primary_Contact)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Commitment objective for meeting
+            <br />
+            <span class="caption"> (note: a goal we set for ourselves to move the sales process forward; customer must take an action not just gain information)</span></span>
+            <span class="val">${(plan.data.Commitment_objective)!"Unknown"}</span>
+        </div>
+
+        <div class="prop question">
+            <span class="label">A few questions that should be asked on the call</span>
+            <span class="val">${(plan.data.few_questions)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Pertinent company information researched prior to meeting<br />
+                <span class="caption">(competitors, current or future management changes, gains/losses, bid hit rate %, sections of business being bought or not)</span></span>
+            <span class="val">${(plan.data.company_information)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Did customer appear to enjoy the salesperson (Act 2)?</span>
+            <span class="val">${(plan.data.buy_into)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Was the salesperson organized for the call?</span>
+            <span class="val">${(plan.data.organized)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Was meeting scheduled with all parties with decision-making ability?</span>
+            <span class="val">${(plan.data.meeting)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Did salesperson ask enough good questions?</span>
+            <span class="val">${(plan.data.good_questions)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Did the sales person ask for the order (could be for time or next meeting)?</span>
+            <span class="val">${(plan.data.ask)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Did the sales person say something positive/new about the company? (at least one)</span>
+            <span class="val">${(plan.data.positive)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Appreciative feedback</span>
+            <span class="val">${(plan.data.feedback)!"Unknown"}</span>
+        </div>
+        <div class="prop question">
+            <span class="label">Constructive feedback</span>
+            <span class="val">${(plan.data.constructive)!"Unknown"}</span>
+        </div>
+    </div>
+</div>
+[/#list]
+</body>
+</html>
