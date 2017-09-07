@@ -114,6 +114,18 @@
 
 .edit.plan .form_entry {
 
+	table.wizard_procedure { // multi-step forms
+		width: 100%;
+
+		.wizard_procedure_step_header {
+			margin-top: 0;
+		}
+
+		.question .form_field h3 {
+			padding: 0;
+		}
+	}
+
 	.question {
 		+ .question {
 			margin-top: 1rem;
@@ -123,8 +135,8 @@
 			width: 100%;
 		}
 
-		.form_field + .form_field {
-			width: calc(50% - 10px);
+		.form_field p {
+			width: 50%;
 			text-align: right;
 			font-size: .8rem;
 			padding: 0;
@@ -180,6 +192,7 @@
 			font-weight: 600;
 			text-align: right;
 			margin-right: 10px;
+			padding-top: 0;
 		}
 
 		span.miwt-calendar {
@@ -238,6 +251,7 @@
 		textarea {
 			padding: 3px 5px;
 			height: 5rem;
+			margin-top: 0;
 		}
 
 		.file_extra_upload_form {
