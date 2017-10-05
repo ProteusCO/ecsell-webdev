@@ -1,6 +1,28 @@
 @import "../config/base-vars";
 @import "../../../../../bower_components/bootstrap/scss/mixins";
 
+table {
+
+	&.wizard_procedure {
+		width: 100%;
+	}
+
+}
+
+.question { //added 10/5/17 for custom activities
+	.form_field.prop-group {
+		.props {
+			display: table;
+			width: 100%;
+			margin: .5rem 0;
+
+			label + input.val {
+				margin-top: 4px;
+			}
+		}
+	}
+}
+
 .inlinewindow {
 	position: relative;
 }
