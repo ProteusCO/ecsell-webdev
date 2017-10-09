@@ -12,9 +12,19 @@ table {
 .question { //added 10/5/17 for custom activities
 	.form_field.prop-group {
 		.props {
-			display: table;
+			display: block;
 			width: 100%;
 			margin: .5rem 0;
+
+			label {
+				display: inline-block;
+				width: 48%;
+			}
+
+			span.extra_value_renderer_readonly {
+				display: inline-block;
+				width: 48%;
+			}
 
 			label + input.val {
 				margin-top: 4px;
