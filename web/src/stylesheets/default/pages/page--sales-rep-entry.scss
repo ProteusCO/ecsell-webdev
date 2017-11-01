@@ -13,6 +13,10 @@
 @import "../components/team-meeting";
 @import "../components/team-retreat";
 
+.hide-ja-toggles .plans .toggles { //added per ECSELL-644
+	display: none;
+}
+
 #primary-content {
 	padding: 20px 40px;
 }
