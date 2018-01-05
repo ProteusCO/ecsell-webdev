@@ -1,5 +1,13 @@
 @import "../components/activities";
 
+//Hide "Covered" checkboxes per ECSELL-691
+.one-to-one-viewer,
+.one-to-one-editor {
+  .prop .cb-field div.checkbox {
+    display: none;
+  }
+}
+
 //hide "Step" titles
 .wizard_category_navigator {
   .wizard_category_navigator_node_step {
