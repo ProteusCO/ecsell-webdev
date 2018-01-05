@@ -17,6 +17,10 @@
 @import "../components/team-meeting";
 @import "../components/team-retreat";
 
+.hide-ja-toggles .plans .toggles { //added per ECSELL-644
+	display: none;
+}
+
 .activity-management {
 	.prop-wrapper .prop-header-title {
 		margin: 0;

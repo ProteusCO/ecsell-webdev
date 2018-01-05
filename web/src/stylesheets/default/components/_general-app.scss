@@ -527,13 +527,35 @@
 		> span {
 			margin-right: .35rem;
 			font-size: .9rem;
+			font-style: italic;
+		}
+
+		> label {
+			display: block;
+			font-size: .9rem;
+			margin-bottom: 0;
+
+			&::after {
+				content: ':';
+				display: inline;
+				margin-right: .35rem;
+				margin-left: -3px;
+			}
+		}
+
+		.select2-container,
+		input[type="text"] {
+			margin: 0 .35rem .5rem 0;
 		}
 
 		.select2-container {
-			margin-left: .5rem;
-
+			&:first-of-type {
+				display: block;
+				width: 233px !important;
+			}
+			&:nth-of-type(2),
 			&:last-of-type {
-				width: 205px !important;
+				width: 172px !important;
 			}
 		}
 

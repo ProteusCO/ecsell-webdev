@@ -11,10 +11,66 @@ table {
 
 .question { //added 10/5/17 for custom activities
 	.form_field.prop-group {
+		width: 100%;
+
+		> section {
+			> .prop-group-title,
+			> .props {
+				display: inline-block;
+				width: 48%;
+				padding: 10px;
+				vertical-align: top;
+
+				.activity-management .form_content & {
+					display: inline-block;
+					width: 48%;
+					padding: 10px;
+					vertical-align: top;
+				}
+			}
+
+			.prop-group-title {
+				text-align: right;
+				margin-bottom: .5rem;
+
+				h1.title {
+					font-size: 14px;
+					font-weight: 600;
+				}
+			}
+
+			.props {
+				text-align: left;
+				margin: 0 0 0 5px;
+			}
+		}
+
 		.props {
-			display: table;
+			display: block;
 			width: 100%;
 			margin: .5rem 0;
+
+			label {
+				display: inline-block;
+				width: 48%;
+
+				&.tbl {
+					width: auto;
+					padding: 0;
+				}
+			}
+
+			span.miwt-calendar,
+			div.extra_value_renderer_editable {
+				padding-top: 10px;
+			}
+
+			span.extra_value_renderer_readonly,
+			.extra_value_renderer_editable {
+				display: inline-block;
+				width: 48%;
+				vertical-align: top;
+			}
 
 			label + input.val {
 				margin-top: 4px;

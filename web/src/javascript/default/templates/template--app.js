@@ -164,6 +164,10 @@ jQuery(function($) {
         }
     }
 
+    function oneToOneCheck() { // ECSELL-691
+        $('.one-to-one-editor input[type="checkbox"]').prop('checked', true);
+    }
+
     $('form.miwt-form').each(function() {
         var form = this;
         form.submit_options = {
@@ -177,11 +181,13 @@ jQuery(function($) {
                 });
             },
             postUpdate: function(data) {
+                oneToOneCheck();
                 updateToggleSwitches();
                 checkForPreCallPlans.call(form);
             }
         };
 
+        oneToOneCheck();
         updateToggleSwitches();
         checkForPreCallPlans.call(form);
         updateMIWT(this);
