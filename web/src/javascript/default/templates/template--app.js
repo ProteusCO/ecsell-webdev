@@ -164,8 +164,9 @@ jQuery(function($) {
         }
     }
 
-    function oneToOneCheck() { // ECSELL-691
+    function hideCovered() { // ECSELL-691 and ECSELL-718
         $('.one-to-one-editor input[type="checkbox"]').prop('checked', true);
+        $('.team-meeting-editor input[type="checkbox"]').prop('checked', true);
     }
 
     $('form.miwt-form').each(function() {
@@ -181,13 +182,13 @@ jQuery(function($) {
                 });
             },
             postUpdate: function(data) {
-                oneToOneCheck();
+                hideCovered();
                 updateToggleSwitches();
                 checkForPreCallPlans.call(form);
             }
         };
 
-        oneToOneCheck();
+        hideCovered();
         updateToggleSwitches();
         checkForPreCallPlans.call(form);
         updateMIWT(this);

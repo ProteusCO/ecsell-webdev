@@ -8,6 +8,14 @@
   }
 }
 
+//Hide "Covered" checkboxes per ECSELL-718
+.team-meeting-viewer,
+.team-meeting-editor {
+  .prop .cb-field span.ctb.label-after {
+    display: none !important;
+  }
+}
+
 //hide "Step" titles
 .wizard_category_navigator {
   .wizard_category_navigator_node_step {
