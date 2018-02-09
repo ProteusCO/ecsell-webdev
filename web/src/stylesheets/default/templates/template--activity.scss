@@ -1,5 +1,46 @@
 @import "../components/activities";
 
+//ECSELL-755
+.left-align {
+
+  .question .form_field h3 {
+    font-size: 1.15rem;
+    padding: 0 .5rem;
+  }
+
+  .viewer .extra_value_renderer {
+    padding-top: 0;
+  }
+
+  .question .form_field.prop-group .props {
+
+    label {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding-bottom: 0;
+      padding-top: 0;
+
+      &.tbl {
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    span.extra_value_renderer_readonly {
+      margin-left: 0;
+      margin-bottom: 1rem;
+      margin-top: -10px;
+      width: 100%;
+    }
+
+    textarea.extra_value_renderer_editable {
+      margin-left: 9px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
 //Hide "Covered" checkboxes per ECSELL-691
 .one-to-one-viewer,
 .one-to-one-editor {
