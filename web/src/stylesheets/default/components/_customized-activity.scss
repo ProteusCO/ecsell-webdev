@@ -26,6 +26,20 @@
 	width: 100%;
 }
 
+.form_content .customized .btn.save_exit_button {
+	background: $color-hab-orange;
+	color: $color-white;
+	border: darken($color-hab-orange, 5%);
+	margin-top: 10px;
+	margin-left: 51%;
+	font-family: $font-open-sans;
+	font-weight: 700;
+
+	&:hover {
+		background: darken($color-hab-orange, 5%);
+	}
+}
+
 .customized.summary .form_field span.label {
 	width: 25%;
 }
@@ -49,6 +63,11 @@
 	text-align: right;
 	display: table-cell;
 	padding: 10px;
+}
+
+.customized .question .form_field.prop-group .props div.extra_value_renderer_editable {
+	padding-top: 0;
+	padding-left: 0;
 }
 
 .customized .extra_value_renderer {
