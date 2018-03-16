@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+[#setting time_zone="UTC"]
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>${(activity_instance.activity_name)!""}</title>
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1079184ze998f091/_fn/joint-activity.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.oneupcoach.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="One-Up powered by EcSell Institute" class="ecsell"/><h1>${activity_instance.activity_name!""}</h1>
+        </div>
+    </div>
+</div>
+<table class='activity-info'>
+    <tr><td>
+        <table class='left'>
+            <tr>
+                <td class='label'>
+                    ${(activity_instance.by.position)!"Manager"}:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.by.name.first)!"Unknown"} ${(activity_instance.by.name.last)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Team Member:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+                </td>
+            </tr>
+        </table></td><td>
+        <table class='right'>
+            <tr>
+                <td class='label'>
+                    Due Date:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.due_date)!"West Pharma"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Date Completed:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.date)!"Unknown"}
+                </td>
+            </tr>
+        </table></td></tr>
+</table>
+<div class="joint-activity" >
+    <div class="joint-activity-content" >
+        <div class="prop question"><span class="label">Specific Behaviors and Actions to Improve</span><span class="val">${(Progress_Plan_0717.data.improve)!"Unknown"}</span></div>
+        <div class="question"><span class="label">People Involved</span><span class="val">${(Progress_Plan_0717.data.people)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Expected Outcome</span><span class="val">${(Progress_Plan_0717.data.outcome)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Touchpoint Check-In Date</span><span class="val">${(Progress_Plan_0717.data.date)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Coaching Focus Area</span><span class="val">${(Progress_Plan_0717.data.theme_definitions_1)!"Unknown"}</span></div>
+    </div>
+</div>
+</body>
+</html>
