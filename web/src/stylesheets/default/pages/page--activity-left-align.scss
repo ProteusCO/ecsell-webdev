@@ -1,0 +1,16 @@
+.question .form_field.prop-group .props {
+
+  label {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  span.extra_value_renderer_readonly {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    margin-top: -10px;
+  }
+}
