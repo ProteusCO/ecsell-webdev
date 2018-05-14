@@ -3,6 +3,11 @@
 @import "../../../../../bower_components/bootstrap/scss/buttons";
 
 .one-to-one-attachment-viewer {
+	background: #f5f5f5;
+	border: 1px solid $color-light-grey;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 5px;
 
 	.actions.upload {
 		.btn {
@@ -15,16 +20,39 @@
 		float: left;
 		width: 90%;
 
+		img {
+			margin-right: 3px;
+		}
+
 		+ .file-row {
-			margin-top: .75rem;
+			margin-top: 1rem;
 		}
 
 		.delete {
-			display: block;
-			float: right;
-			margin-right: 10px;
-			@include button-variant($color-app-red, $color-white, $color-app-red);
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 8px;
+			float: none;
+			color: transparent;
+			border: none;
+			background: transparent;
+			width: 45px;
+			overflow: hidden;
+			white-space: nowrap;
+			padding: 0 .25rem;
+
+			&::before {
+				content: '\f1f8';
+				font-family: $font-glyph-lib;
+				font-weight: normal;
+				font-size: inherit;
+				color: $color-app-red;
+			}
 		}
+	}
+
+	.actions.bottom {
+		margin-top: .5rem;
 	}
 }
 
