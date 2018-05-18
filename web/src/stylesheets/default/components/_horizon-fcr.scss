@@ -1,16 +1,13 @@
 .form_entry .horizon-fcr-coaching {
 
-	.question {
-		margin-bottom: 2rem;
-		padding-bottom: 1.5rem;
-		border-bottom: 1px solid $color-light-grey;
+	&.summary .viewer {
+		.question .form_field {
+			width: 100%;
 
-		&.total-score {
-			border-bottom: none;
-			padding-bottom: 0;
-
-			> .form_field {
-				width: 100%;
+			&.score-label_wrapper,
+			&.score {
+				display: inline-block;
+				width: auto;
 			}
 
 			.avg-score,
@@ -31,23 +28,25 @@
 				margin-left: -5px;
 				text-align: right;
 			}
+		}
+	}
 
-			p {
-				margin: 0;
-			}
+	.wizard_procedure_step {
 
-			+ .question {
-				border-bottom: none;
-				padding: 0;
-				margin: 0;
-			}
+		table {
+			margin-bottom: 1.75rem;
+		}
+
+		div.content {
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid $color-light-grey;
 		}
 	}
 
 	.question .form_field {
 
 		table {
-			margin-bottom: 1.75rem;
 
 			tbody > tr:first-child {
 				background: #25282a;
@@ -76,6 +75,10 @@
 
 		h2 {
 			margin-bottom: 1rem;
+			font-size: 22px;
+			margin-top: 1rem;
+			padding-top: 1.25rem;
+			border-top: 1px solid $color-light-grey;
 		}
 
 		&.score-label_wrapper,
@@ -156,54 +159,109 @@
 		}
 	}
 
-	.wizard_procedure_step.summary {
+	.wizard_procedure_step.summary .summary_content {
 
-		.question .form_field {
-
-			+ .form_field {
-				border-top: 1px solid $color-light-grey;
-			}
+		.question {
+			margin-bottom: .75rem;
+			padding-bottom: .75rem;
+			border-bottom: 1px solid $color-light-grey;
 
 			&:first-of-type {
-				border: none;
+				margin-bottom: .5rem;
+				padding: 0;
+				border-bottom: none;
 			}
+
+			&.total-score {
+
+				.form_field {
+					width: 100% !important;
+				}
+
+				.avg-score,
+				.total-score {
+					background: #25282a;
+					background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+					color: $color-white;
+					display: inline-block;
+					padding: 8px;
+				}
+
+				.avg-score {
+					width: 75%;
+				}
+
+				.total-score {
+					width: 25%;
+					margin-left: -5px;
+					text-align: right;
+				}
+			}
+
+			&:last-of-type,
+			&.total-score,
+			&:nth-last-child(3) {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
+		}
+
+		.question:first-of-type .form_field {
+			width: 100%;
 
 			> div {
 				display: inline-block;
+				vertical-align: top;
 				padding: 8px;
 
-				&.question-summary,
-				&.score-summary {
+				&.summary {
 					background: #25282a;
 					background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
 					color: $color-white;
 				}
 
 				&:first-of-type {
-					width: 75%;
+					width: 30%;
+				}
+
+				&:nth-of-type(2) {
+					width: 15%;
+					margin-left: -5px;
+					padding: 8px 8px 8px 25px;
 				}
 
 				&:last-of-type {
-					width: 25%;
+					width: 55%;
 					margin-left: -5px;
-					text-align: right;
+					//text-align: right;
 				}
 			}
 		}
 
-		.question {
-			margin-bottom: 0;
-			padding-bottom: 0;
-			border-bottom: none;
+		.question:not(:first-of-type) {
 
-			&.total-score {
-				.form_field {
-					border: none;
+			.form_field {
+				display: inline-block;
+				padding: 8px;
+				margin-bottom: 0;
+
+				&:first-of-type {
+					width: 30%;
 				}
 
-				+ .question {
-					.form_field {
-						border: none;
+				&:nth-of-type(2) {
+					width: 15%;
+					margin-left: -5px;
+					padding-left: 25px;
+				}
+
+				&:last-of-type {
+					width: 55%;
+					margin-left: -5px;
+
+					&.submit_registration_button {
+						width: 100%;
 					}
 				}
 			}
