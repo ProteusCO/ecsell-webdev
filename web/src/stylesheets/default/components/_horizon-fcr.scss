@@ -1,0 +1,281 @@
+.form_entry .horizon-fcr-coaching {
+
+	&.summary .viewer {
+		.question .form_field {
+			width: 100%;
+
+			&.score-label_wrapper,
+			&.score {
+				display: inline-block;
+				width: auto;
+			}
+
+			.avg-score,
+			.total-score {
+				background: #25282a;
+				background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+				color: $color-white;
+				display: inline-block;
+				padding: 5px 8px;
+			}
+
+			.avg-score {
+				width: 75%;
+			}
+
+			.total-score {
+				width: 25%;
+				margin-left: -5px;
+				text-align: right;
+			}
+		}
+	}
+
+	.wizard_procedure_step {
+
+		table {
+			margin-bottom: 1.75rem;
+		}
+
+		div.content {
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px solid $color-light-grey;
+		}
+	}
+
+	.question .form_field {
+
+		table {
+
+			tbody > tr:first-child {
+				background: #25282a;
+				background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+
+				td {
+					color: $color-white;
+					padding: 5px;
+					border-left: 1px solid $color-grey;
+
+					&:last-child {
+						border-right: 1px solid $color-grey;
+					}
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+			}
+
+			td {
+				padding: 10px 8px;
+				border: 1px solid $color-light-grey;
+			}
+		}
+
+		h2 {
+			margin-bottom: 1rem;
+			font-size: 22px;
+			margin-top: 1rem;
+			padding-top: 1.25rem;
+			border-top: 1px solid $color-light-grey;
+		}
+
+		&.score-label_wrapper,
+		&.score {
+			display: inline-block;
+			vertical-align: middle;
+			width: auto;
+
+			p {
+				margin: 0;
+			}
+		}
+
+		&.score {
+			width: 50%;
+
+			.props {
+				margin: 0;
+
+				.extra_value_renderer {
+					padding-top: 0;
+				}
+			}
+
+			.button_description_container {
+				display: inline-block;
+				margin-right: .75rem;
+
+				.choice .label-after input,
+				.choice .label-after label {
+					display: inline-block;
+				}
+
+				.choice .label-after label {
+					margin-left: 5px;
+				}
+			}
+		}
+
+		&.score-label_wrapper {
+			margin-right: 8px;
+
+			.score-label strong {
+				font-weight: 600;
+			}
+
+			+ .form_field .props .extra_value_renderer_editable {
+				margin-top: -10px;
+			}
+		}
+
+		&.text_field {
+			.props {
+				label {
+					display: block;
+					text-align: left;
+					padding: 0;
+					margin: 1rem 0 0;
+				}
+
+				span.extra_value_renderer_readonly {
+					margin-left: 0;
+					width: 50%;
+					padding: 10px 0;
+				}
+			}
+		}
+	}
+
+	.btn.save_exit_button {
+		margin-bottom: 1rem;
+		border: 1px solid $color-hab-orange;
+		padding: .5rem 1rem .4rem;
+
+		&:hover {
+			background: $color-hab-orange;
+			color: $color-white;
+		}
+	}
+
+	.wizard_procedure_step.summary .summary_content {
+
+		.question {
+			margin-bottom: .75rem;
+			padding-bottom: .75rem;
+			border-bottom: 1px solid $color-light-grey;
+
+			&:first-of-type {
+				margin-bottom: .5rem;
+				padding: 0;
+				border-bottom: none;
+			}
+
+			&.total-score {
+				background: #25282a;
+				background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+				color: $color-white;
+
+				.form_field {
+					width: 100% !important;
+					padding: 0 !important;
+				}
+
+				.avg-score,
+				.total-score {
+					display: inline-block;
+					padding: 8px 15px;
+				}
+
+				.avg-score {
+					width: 30.5%;
+				}
+
+				.total-score {
+					width: 25%;
+				}
+			}
+
+			&:last-of-type,
+			&.total-score,
+			&:nth-last-child(3) {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: 0;
+			}
+		}
+
+		.question:first-of-type .form_field {
+			width: 100%;
+
+			> div {
+				display: inline-block;
+				vertical-align: top;
+				padding: 8px;
+
+				&.summary {
+					background: #25282a;
+					background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+					color: $color-white;
+				}
+
+				&:first-of-type {
+					width: 30%;
+				}
+
+				&:nth-of-type(2) {
+					width: 15%;
+					margin-left: -5px;
+					padding: 8px 8px 8px 25px;
+				}
+
+				&:last-of-type {
+					width: 55%;
+					margin-left: -5px;
+					//text-align: right;
+				}
+			}
+		}
+
+		.question:not(:first-of-type) {
+
+			.form_field {
+				display: inline-block;
+				padding: 8px;
+				margin-bottom: 0;
+
+				&:first-of-type {
+					width: 30%;
+				}
+
+				&:nth-of-type(2) {
+					width: 15%;
+					margin-left: -5px;
+					padding-left: 25px;
+				}
+
+				&:last-of-type {
+					width: 55%;
+					margin-left: -5px;
+
+					&.submit_registration_button {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.btn.save_exit_button {
+			margin-top: -3.15rem;
+		}
+	}
+
+	button[disabled="disabled"] {
+		display: none;
+	}
+
+	span.submit_button {
+		text-align: right;
+	}
+}
