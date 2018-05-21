@@ -173,28 +173,27 @@
 			}
 
 			&.total-score {
+				background: #25282a;
+				background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+				color: $color-white;
 
 				.form_field {
 					width: 100% !important;
+					padding: 0 !important;
 				}
 
 				.avg-score,
 				.total-score {
-					background: #25282a;
-					background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
-					color: $color-white;
 					display: inline-block;
-					padding: 8px;
+					padding: 8px 15px;
 				}
 
 				.avg-score {
-					width: 75%;
+					width: 30.5%;
 				}
 
 				.total-score {
 					width: 25%;
-					margin-left: -5px;
-					text-align: right;
 				}
 			}
 
