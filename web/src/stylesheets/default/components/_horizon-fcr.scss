@@ -1,6 +1,11 @@
 .form_entry .horizon-fcr-coaching {
 
 	&.summary .viewer {
+
+		> div > label {
+			display: none;
+		}
+
 		.question .form_field {
 			width: 100%;
 
@@ -29,6 +34,36 @@
 				text-align: right;
 			}
 		}
+
+		> div > div:last-of-type {
+			margin-top: 2rem;
+		}
+
+		.question.horizon-smart-summary {
+			margin-bottom: 1rem;
+
+			label {
+				font-weight: 700;
+				display: block;
+			}
+
+			div.label,
+			div.score {
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			div.label {
+				font-weight: 700;
+				margin-right: 8px;
+			}
+
+			&:nth-of-type(3) {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid $color-light-grey;
+			}
+		}
 	}
 
 	.wizard_procedure_step {
@@ -49,13 +84,13 @@
 		table {
 
 			tbody > tr:first-child {
-				background: #25282a;
-				background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
 
 				td {
 					color: $color-white;
 					padding: 5px;
 					border-left: 1px solid $color-grey;
+					background: #25282a;
+					background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
 
 					&:last-child {
 						border-right: 1px solid $color-grey;
@@ -70,6 +105,18 @@
 			td {
 				padding: 10px 8px;
 				border: 1px solid $color-light-grey;
+
+				&.gradient {
+					color: $color-white;
+					padding: 5px;
+					border-left: 1px solid $color-grey;
+					background: #25282a;
+					background: linear-gradient(to bottom,  #25282a 0%,#696c6e 100%);
+
+					&:last-child {
+						border-right: 1px solid $color-grey;
+					}
+				}
 			}
 		}
 
@@ -148,6 +195,124 @@
 		}
 	}
 
+	.horizon-smart {
+
+		.question {
+
+			.form_field.prop-group {
+				display: inline-block;
+				width: 49%;
+				vertical-align: top;
+
+				+ .prop-group {
+					padding-left: 2rem;
+				}
+
+				.props {
+					margin: 0;
+				}
+
+				.props > label {
+					margin: 0 0 .67em;
+				}
+
+				> section .prop-group-title {
+					margin-bottom: 0;
+				}
+
+				.props .extra_value_renderer_editable,
+				> section .prop-group-title,
+				> section > .props {
+					width: 100%;
+					text-align: left;
+					padding: 0;
+				}
+				.button_description_container {
+					display: inline-block;
+					vertical-align: top;
+					width: auto;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+
+	.horizon-metrics_content {
+
+		.question .text_field {
+			display: inline-block;
+			vertical-align: top;
+			width: 25%;
+			padding: 0 10px;
+
+			input,
+			label {
+				width: 100%;
+			}
+
+			.props label {
+				margin-top: 0;
+			}
+		}
+
+		.sum,
+		.total-score {
+			display: inline-block;
+		}
+
+		.sum {
+			margin: 8px 8px 0 0;
+			width: 190px;
+		}
+
+		h3 {
+			margin-top: 1.75rem;
+		}
+	}
+
+	.horizon-final-summary_content {
+
+		.question.horizon-smart-summary {
+			&:nth-of-type(3) {
+				margin-bottom: 1.5rem;
+				padding-bottom: 1rem;
+				border-bottom: 1px solid $color-light-grey;
+			}
+		}
+
+		.text_field {
+			label {
+				font-weight: 700;
+				display: block;
+			}
+		}
+
+		div.label,
+		div.score {
+			display: inline-block;
+			vertical-align: top;
+			margin-top: .5rem;
+		}
+
+		div.label {
+			font-weight: 700;
+			margin-right: 8px;
+		}
+
+
+	}
+
+	.horizon-product-metrics-summary,
+	.horizon-activity-metrics-summary {
+		td {
+			text-align: center;
+
+			&:first-of-type {
+				text-align: left;
+			}
+		}
+	}
+
 	.btn.save_exit_button {
 		margin-bottom: 1rem;
 		border: 1px solid $color-hab-orange;
@@ -157,6 +322,10 @@
 			background: $color-hab-orange;
 			color: $color-white;
 		}
+	}
+
+	.wizard_procedure_step_header {
+		display: none;
 	}
 
 	.wizard_procedure_step.summary .summary_content {
