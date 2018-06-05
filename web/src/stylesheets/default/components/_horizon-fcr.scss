@@ -36,7 +36,7 @@
 		}
 
 		> div > div:last-of-type {
-			margin-top: 2rem;
+			margin-top: 1rem;
 		}
 
 		.question.horizon-smart-summary {
@@ -57,12 +57,10 @@
 				font-weight: 700;
 				margin-right: 8px;
 			}
+		}
 
-			&:nth-of-type(3) {
-				margin-bottom: 1.5rem;
-				padding-bottom: 1rem;
-				border-bottom: 1px solid $color-light-grey;
-			}
+		.horizon-activity-metrics-summary {
+			margin: 2rem 0;
 		}
 	}
 
@@ -271,14 +269,6 @@
 	}
 
 	.horizon-final-summary_content {
-
-		.question.horizon-smart-summary {
-			&:nth-of-type(3) {
-				margin-bottom: 1.5rem;
-				padding-bottom: 1rem;
-				border-bottom: 1px solid $color-light-grey;
-			}
-		}
 
 		.text_field {
 			label {
