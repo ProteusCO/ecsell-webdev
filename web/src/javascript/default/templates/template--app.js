@@ -169,6 +169,15 @@ jQuery(function($) {
         $('.team-meeting-editor input[type="checkbox"]').prop('checked', true);
     }
 
+    function scrollOnError() {
+        if ( $('.message-container:not(".empty")').hasClass('registration_validation_errors') ) {
+            console.log('Has Error');
+            $('html, body').animate({
+                scrollTop: $("#page-top").offset().top
+            }, 750);
+        }
+    }
+
     $('form.miwt-form').each(function() {
         var form = this;
         form.submit_options = {
@@ -185,6 +194,7 @@ jQuery(function($) {
                 hideCovered();
                 updateToggleSwitches();
                 checkForPreCallPlans.call(form);
+                scrollOnError();
             }
         };
 
