@@ -1,0 +1,239 @@
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url("/_resources/dyn/files/8963z8187dfc1/_fn/OpenSans-Bold-webfont.ttf") format("truetype");
+  -fs-pdf-font-embed: embed;
+}
+
+@font-face {
+  font-family: 'OpenSansExtraBold';
+  src: url("/_resources/dyn/files/8967z86ea1bd8/_fn/OpenSans-ExtraBold-webfont.ttf") format("truetype");
+  -fs-pdf-font-embed: embed;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("/_resources/dyn/files/8971z76928fac/_fn/OpenSans-Regular-webfont.ttf") format("truetype");
+  -fs-pdf-font-embed: embed;
+}
+
+@font-face {
+  font-family: 'OpenSansSemiBold';
+  src: url("/_resources/dyn/files/8975z71ff4bb5/_fn/OpenSans-Semibold-webfont.ttf") format("truetype");
+  -fs-pdf-font-embed: embed;
+}
+
+@page {
+  size: 11.25in 8.75in;
+  /* 8.5x11 + 0.125 bleed area on each edge */
+  margin: 0.5in;
+  @bottom-right-corner {
+    content: counter(page);
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: OpenSans, Arial, sans-serif;
+}
+
+.ecsell {
+  margin: 0;
+  padding: 0;
+  float: right;
+  width: 186px;
+  height: 38px;
+}
+
+h1 {
+  font-size: 18px;
+  margin: 0.1in;
+}
+
+.horizon-coaching {
+  border-top: 1px solid #C2C2C2;
+  margin-top: .225in;
+}
+
+.activity-info {
+  margin-top: 0.25in;
+}
+
+.activity-info .left {
+  width: 4in;
+}
+
+.activity-info .right {
+  margin-left: 0.5in;
+  width: 3in;
+}
+
+.activity-info .label {
+  width: 1.75in;
+  text-align: right;
+}
+
+.activity-info .val {
+  width: 1.75in;
+  margin-left: 0.125in;
+}
+
+.instructions {
+  font-size: 12px;
+  width: 7.5in;
+  margin: 10px 0px;
+}
+
+.instructions .label {
+  padding-right: 5px;
+  font-family: OpenSansSemiBold, Arial, sans-serif;
+}
+
+.instructions .val {
+  border-left: 1px solid #C2C2C2;
+  padding: 0px 5px;
+}
+
+.activity {
+  border: 1px solid #062B47;
+  margin: 10px 0px;
+  border-collapse: collapse;
+  width: 7.5in;
+  page-break-inside: avoid;
+}
+
+.activity th.header {
+  background: #062B47;
+  height: 30px;
+  color: #FFFFFF;
+  font-family: OpenSansSemiBold, Arial, sans-serif;
+  font-size: 14px;
+  padding: 0px 5px;
+  text-align: center;
+  line-height: 14px;
+}
+
+.summary-table.break {
+  page-break-after: always;
+}
+
+.summary-table table {
+  margin-bottom: 16px;
+}
+
+.summary-table th, .summary-table td {
+  width: 2.25in;
+  padding: 10px;
+}
+
+.summary-table th {
+  background: #062B47;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.summary-table th p {
+  margin: 0;
+}
+
+.summary-table td {
+  border: 1px solid #062B47;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.summary-table .label {
+  font-family: OpenSansSemiBold, Arial, sans-serif;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.summary-table .score-con .label,
+.summary-table .score-con .score {
+  display: inline-block;
+}
+
+.summary-table .recco-con .label {
+  display: block;
+}
+
+.summary-table .recco-con {
+  margin-top: 8px;
+}
+
+.activity-summary {
+  border: 1px solid #062B47;
+  margin: 10px 0px;
+  border-collapse: collapse;
+  width: 7.5in;
+}
+
+.activity th.grand-total, .activity th.sub-total, .activity th.val {
+  font-size: 16px;
+  font-family: OpenSansSemiBold, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.total-score {
+  background:#062B47;
+  color: #ffffff;
+  padding: 10px;
+  margin-top: 20px;
+  page-break-after: always;
+}
+
+.total-score .label,
+.total-score .score {
+  display: inline-block;
+  width: 49%;
+}
+
+.total-score .score {
+  text-align: right;
+}
+
+.smart + .smart {
+  margin-top: 20px;
+}
+
+.smart .label {
+  font-family: OpenSansSemiBold, Arial, sans-serif;
+  margin-right: 8px;
+  font-weight: 700;
+}
+
+.smart .entry {
+  margin-bottom: 8px;
+}
+
+.metrics-summary,
+.action-activity-summary {
+  margin-top: 20px;
+  page-break-inside: avoid;
+}
+
+.metrics-summary th,
+.action-activity-summary th {
+  background:#062B47;
+  color: #ffffff;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+.metrics-summary th,
+.metrics-summary td {
+  width: 2.25in;
+}
+
+.metrics-summary th,
+.metrics-summary td,
+.action-activity-summary th,
+.action-activity-summary td {
+  text-align: center;
+}
+
+.metrics-summary td,
+.action-activity-summary td {
+  border: 1px solid #062B47;
+  padding: 10px;
+  border-collapse: collapse;
+}
