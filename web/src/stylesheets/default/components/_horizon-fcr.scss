@@ -193,6 +193,21 @@
 		}
 	}
 
+	.question.gets-icon .form_field {
+		h2 {
+			&::after {
+				content: '';
+				display: inline-block;
+				background: url(/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg) no-repeat center center;
+				background-size: 100% auto;
+				width: 35px;
+				height: 35px;
+				margin-left: 8px;
+				vertical-align: middle;
+			}
+		}
+	}
+
 	.horizon-smart {
 
 		.question {
