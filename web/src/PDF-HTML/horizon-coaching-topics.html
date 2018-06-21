@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Horizon FCR Coaching Topics</title>
-    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1091259z5a45dab6/_fn/horizon-coaching-topics.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1091663z96b4c8b7/_fn/horizon-coaching-topics.css" type="text/css" />
 </head>
 <body>
 <div class="rep-activity-main">
@@ -59,6 +59,231 @@
 </table>
 <div class="horizon-coaching" >
     <div class="activity-calc" >
+
+        <div class="section-header">
+            <h2>Coaching to Behavior - Action Items</h2>
+        </div>
+
+        <div class="smart-con">
+            <div class="smart">
+                <div class="label">SMART Action Item 1</div>
+                <div class="entry">${(horizon_field_coaching_report.data.smart1)!"Unknown"}</div>
+                <span class="label">Development Level</span>
+                <span class="score">${(horizon_field_coaching_report.data.smart1_dev_level)!"Unknown"}</span>
+            </div>
+
+            <div class="smart">
+                <div class="label">SMART Action Item 2</div>
+                <div class="entry">${(horizon_field_coaching_report.data.smart2)!"Unknown"}</div>
+                <span class="label">Development Level</span>
+                <span class="score">${(horizon_field_coaching_report.data.smart2_dev_level)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="metrics-summary">
+            <h3>Territory KPI's</h3>
+            <table cellpadding="0" cellspacing="0" style="width:100%;">
+                <tbody>
+                <tr>
+                    <th style="text-align:left;"><strong>Product</strong></th>
+                    <th><strong>Wkly Avg TRx (QTD)</strong></th>
+                    <th><strong>Wkly Goal</strong></th>
+                    <th><strong>% Goal</strong></th>
+                    <th><strong>TRx/wk to reach goal</strong></th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>DUEXIS</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_wkly_avg_trax)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_wkly_goal)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_goal_percentage)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_trx_reach_goal)!"Unknown"}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>VIMOVO</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_wkly_avg_trx)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_wkly_goal)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_goal_percentage)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_trx_reach_goal)!"Unknown"}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>PENNSAID</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_wkly_avg_trx)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_wkly_goal)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_goal_percentage)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_trx_reach_goal)!"Unknown"}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>TOTAL</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.wkly_avg_trx_score)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.wkly_goal_score)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.percent_goal_score)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.trx_reach_goal_score)!"Unknown"}</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="action-activity-summary">
+            <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                <tr>
+                    <th style="text-align:left;"><strong>Activity (4 wk avg)</strong></th>
+                    <th><strong>TM</strong></th>
+                    <th><strong>Top 40 Avg.</strong></th>
+                    <th colspan="3"><strong>Distribution of Calls Made (Last 4 Weeks)</strong></th>
+                    <th rowspan="2"><strong>% Low Pot Non Writer</strong></th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>Calls / Day</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_tm)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_top_40_avg)!"Unknown"}</strong></td>
+                    <th><strong>High Pot %</strong></th>
+                    <th><strong>Med Pot %</strong></th>
+                    <th><strong>Low Pot %</strong></th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>Samp / Day</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_tm)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_top_40_avg)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_high_pot)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_med_pot)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_low_pot)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_non_writer)!"Unknown"}</strong></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary-table coaching-topics-summary break" style="page-break-before: always;">
+            <h3>Coaching to Behaviors - Coaching Topics Summary</h3>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p><strong>Questions</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>Score</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p><strong>Recommendation</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top" class="first">
+                        <p><strong>Coaching to Behaviors - Visual Aids</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.visual_aids)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.visual_aids_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Closing</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.closing)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.closing_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - HorizonCares</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.horizoncares)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.horizoncares_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Maximizing Your Selling Day</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.maximizing_selling_day)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.selling_day_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Effective Clinical Messaging based on Adoption Cycle</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.effective_messaging)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.effective_mssg_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Targeting/Routing</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.targeting_routing)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.targeting_rt_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Meaningful Dialogue</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.meaningful_dialogue)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.dialogue_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Pre-call Planning using the Adoption Cycle</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.precall_planning)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.precall_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Relationship Edge</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.relationship_edge)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.relationship_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th valign="top">
+                        <p><strong>Total Score</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>${(horizon_field_coaching_report.data.total_score)!"Unknown"}</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>&nbsp;</strong></p>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
         <div class="section-header">
             <h2>Coaching to Behavior - Coaching Topics</h2>
         </div>
@@ -109,7 +334,7 @@
                 </tbody>
             </table>
             <div class="score-con">
-                <span class="label">Visual Aides score</span>
+                <span class="label">Visual Aids score</span>
                 <span class="score">${(horizon_field_coaching_report.data.visual_aids)!"Unknown"}</span>
             </div>
             <div class="recco-con">
@@ -175,7 +400,7 @@
         </div>
 
         <div class="summary-table break">
-            <h3>Coaching to Beheaviors - HorizonCares</h3>
+            <h3>Coaching to Behaviors - HorizonCares</h3>
             <table cellpadding="0" cellspacing="0">
                 <tbody>
                 <tr>
@@ -607,100 +832,6 @@
         <div class="total-score">
             <span class="label">Coaching Topics - Total Score</span>
             <span class="score">${(horizon_field_coaching_report.data.avg_score)!"Unknown"}</span>
-        </div>
-
-        <div class="section-header">
-            <h2>Territory KPI's</h2>
-        </div>
-
-        <div class="smart-con">
-            <div class="smart">
-                <div class="label">SMART Action Item 1</div>
-                <div class="entry">${(horizon_field_coaching_report.data.smart1)!"Unknown"}</div>
-                <span class="label">Development Level</span>
-                <span class="score">${(horizon_field_coaching_report.data.smart1_dev_level)!"Unknown"}</span>
-            </div>
-
-            <div class="smart">
-                <div class="label">SMART Action Item 2</div>
-                <div class="entry">${(horizon_field_coaching_report.data.smart2)!"Unknown"}</div>
-                <span class="label">Development Level</span>
-                <span class="score">${(horizon_field_coaching_report.data.smart2_dev_level)!"Unknown"}</span>
-            </div>
-        </div>
-
-        <div class="metrics-summary">
-            <table cellpadding="0" cellspacing="0" style="width:100%;">
-                <tbody>
-                <tr>
-                    <th style="text-align:left;"><strong>Product</strong></th>
-                    <th><strong>Wkly Avg TRx (QTD)</strong></th>
-                    <th><strong>Wkly Goal</strong></th>
-                    <th><strong>% Goal</strong></th>
-                    <th><strong>TRx/wk to reach goal</strong></th>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>DUEXIS</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.duexis_wkly_avg_trax)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.duexis_wkly_goal)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.duexis_goal_percentage)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.duexis_trx_reach_goal)!"Unknown"}</strong></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>VIMOVO</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.vimovo_wkly_avg_trx)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.vimovo_wkly_goal)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.vimovo_goal_percentage)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.vimovo_trx_reach_goal)!"Unknown"}</strong></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>PENNSAID</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_wkly_avg_trx)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_wkly_goal)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_goal_percentage)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_trx_reach_goal)!"Unknown"}</strong></td>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>TOTAL</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.wkly_avg_trx_score)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.wkly_goal_score)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.percent_goal_score)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.trx_reach_goal_score)!"Unknown"}</strong></td>
-                </tr>
-                </tbody>
-            </table>
-
-        </div>
-
-        <div class="action-activity-summary">
-            <table cellpadding="0" cellspacing="0" style="width: 100%;">
-                <tbody>
-                <tr>
-                    <th style="text-align:left;"><strong>Activity (4 wk avg)</strong></th>
-                    <th><strong>TM</strong></th>
-                    <th><strong>Top 40 Avg.</strong></th>
-                    <th colspan="3"><strong>Distribution of Calls Made (Last 4 Weeks)</strong></th>
-                    <th rowspan="2"><strong>% Low Pot Non Writer</strong></th>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>Calls / Day</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_tm)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_top_40_avg)!"Unknown"}</strong></td>
-                    <th><strong>High Pot %</strong></th>
-                    <th><strong>Med Pot %</strong></th>
-                    <th><strong>Low Pot %</strong></th>
-                </tr>
-                <tr>
-                    <td style="text-align:left;"><strong>Samp / Day</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_tm)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_top_40_avg)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_high_pot)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_med_pot)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_low_pot)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_non_writer)!"Unknown"}</strong></td>
-                </tr>
-                </tbody>
-            </table>
         </div>
 
     </div>

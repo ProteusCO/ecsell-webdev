@@ -112,6 +112,22 @@ h1 {
   line-height: 14px;
 }
 
+.summary-table.coaching-topics-summary td {
+  padding: 5px 10px;
+}
+
+.summary-table.coaching-topics-summary td:first-child {
+  width: 45%;
+}
+
+.summary-table.coaching-topics-summary td:nth-child(2) {
+  width: 10%;
+}
+
+.summary-table.coaching-topics-summary td:last-child {
+  width: 45%;
+}
+
 .summary-table.break {
   page-break-after: always;
 }
@@ -152,12 +168,17 @@ h1 {
   display: inline-block;
 }
 
-.summary-table .recco-con .label {
-  display: block;
-}
-
 .summary-table .recco-con {
   margin-top: 8px;
+}
+
+.summary-table .recco-con .label,
+.summary-table .recco-con .score {
+  display: inline;
+}
+
+.summary-table .recco-con .label {
+  margin-right: 5px;
 }
 
 .activity-summary {
