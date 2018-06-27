@@ -247,7 +247,7 @@ h1 {
 
 .metrics-summary th,
 .metrics-summary td {
-  width: 2.25in;
+  width: 2.025in;
 }
 
 .metrics-summary th,
@@ -262,4 +262,14 @@ h1 {
   border: 1px solid #062B47;
   padding: 10px;
   border-collapse: collapse;
+}
+
+.action-activity-summary.sample-calls th,
+.action-activity-summary.sample-calls td {
+  width: 2.7in;
+}
+
+.action-activity-summary.dist-calls th,
+.action-activity-summary.dist-calls td {
+  width: 1.62in;
 }
