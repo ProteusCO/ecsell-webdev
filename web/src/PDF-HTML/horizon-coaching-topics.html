@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Horizon FCR Coaching Topics</title>
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1091663z96b4c8b7/_fn/horizon-coaching-topics.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.oneupcoach.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="One-Up powered by EcSell Institute" class="ecsell"/><h1>Horizon FCR Coaching Topics</h1>
+        </div>
+    </div>
+</div>
+<table class='activity-info'>
+    <tr><td><table class='left'>
+        <tr>
+            <td class='label'>
+                Status:
+            </td>
+            <td class='val'>
+                ${(activity_instance.status)!"Unknown"}
+            </td>
+        </tr>
+        <tr>
+            <td class='label'>
+                ${(activity_instance.by.position)!"Manager"}:
+            </td>
+            <td class='val'>
+                ${(activity_instance.by.name.first)!"Unknown"} ${(activity_instance.by.name.last)!"Unknown"}
+            </td>
+        </tr>
+        <tr>
+            <td class='label'>
+                Team Member:
+            </td>
+            <td class='val'>
+                ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+            </td>
+        </tr>
+    </table></td><td><table class='right'>
+        <tr>
+            <td class='label'>
+                Due Date:
+            </td>
+            <td class='val'>
+                ${(activity_instance.due_date)!"Unknown"}
+            </td>
+        </tr>
+        <tr>
+            <td class='label'>
+                Date Completed:
+            </td>
+            <td class='val'>
+                ${(activity_instance.date)!"Unknown"}
+            </td>
+        </tr>
+    </table></td></tr>
+</table>
+<div class="horizon-coaching" >
+    <div class="activity-calc" >
+
+        <div class="section-header">
+            <h2>Coaching to Behavior - Action Items</h2>
+        </div>
+
+        <div class="smart-con">
+            <div class="smart">
+                <div class="label">SMART Action Item 1</div>
+                <div class="entry">${(horizon_field_coaching_report.data.smart1)!"Unknown"}</div>
+                <span class="label">Development Level</span>
+                <span class="score">${(horizon_field_coaching_report.data.smart1_dev_level)!"Unknown"}</span>
+            </div>
+
+            <div class="smart">
+                <div class="label">SMART Action Item 2</div>
+                <div class="entry">${(horizon_field_coaching_report.data.smart2)!"Unknown"}</div>
+                <span class="label">Development Level</span>
+                <span class="score">${(horizon_field_coaching_report.data.smart2_dev_level)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="metrics-summary">
+            <h3>Territory KPI's</h3>
+            <table cellpadding="0" cellspacing="0" style="width:100%;">
+                <tbody>
+                <tr>
+                    <th style="text-align:left;"><strong>Product</strong></th>
+                    <th><strong>Wkly Avg TRx (QTD)</strong></th>
+                    <th><strong>Wkly Goal</strong></th>
+                    <th><strong>% Goal</strong></th>
+                    <th><strong>TRx/wk to reach goal</strong></th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>DUEXIS</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_wkly_avg_trax)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_wkly_goal)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_goal_percentage)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.duexis_trx_reach_goal)!"Unknown"}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>VIMOVO</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_wkly_avg_trx)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_wkly_goal)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_goal_percentage)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.vimovo_trx_reach_goal)!"Unknown"}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>PENNSAID</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_wkly_avg_trx)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_wkly_goal)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_goal_percentage)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.pennsaid_trx_reach_goal)!"Unknown"}</strong></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>TOTAL</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.wkly_avg_trx_score)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.wkly_goal_score)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.percent_goal_score)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.trx_reach_goal_score)!"Unknown"}</strong></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="action-activity-summary">
+            <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                <tr>
+                    <th style="text-align:left;"><strong>Activity (4 wk avg)</strong></th>
+                    <th><strong>TM</strong></th>
+                    <th><strong>Top 40 Avg.</strong></th>
+                    <th colspan="3"><strong>Distribution of Calls Made (Last 4 Weeks)</strong></th>
+                    <th rowspan="2"><strong>% Low Pot Non Writer</strong></th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>Calls / Day</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_tm)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_top_40_avg)!"Unknown"}</strong></td>
+                    <th><strong>High Pot %</strong></th>
+                    <th><strong>Med Pot %</strong></th>
+                    <th><strong>Low Pot %</strong></th>
+                </tr>
+                <tr>
+                    <td style="text-align:left;"><strong>Samp / Day</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_tm)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_top_40_avg)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_high_pot)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_med_pot)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_low_pot)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_non_writer)!"Unknown"}</strong></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="summary-table coaching-topics-summary break" style="page-break-before: always;">
+            <h3>Coaching to Behaviors - Coaching Topics Summary</h3>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p><strong>Questions</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>Score</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p><strong>Recommendation</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top" class="first">
+                        <p><strong>Coaching to Behaviors - Visual Aids</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.visual_aids)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.visual_aids_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Closing</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.closing)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.closing_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - HorizonCares</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.horizoncares)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.horizoncares_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Maximizing Your Selling Day</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.maximizing_selling_day)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.selling_day_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Effective Clinical Messaging based on Adoption Cycle</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.effective_messaging)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.effective_mssg_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Targeting/Routing</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.targeting_routing)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.targeting_rt_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Meaningful Dialogue</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.meaningful_dialogue)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.dialogue_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Pre-call Planning using the Adoption Cycle</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.precall_planning)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.precall_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p><strong>Coaching to Behaviors - Relationship Edge</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.relationship_edge)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.relationship_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th valign="top">
+                        <p><strong>Total Score</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>${(horizon_field_coaching_report.data.total_score)!"Unknown"}</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>&nbsp;</strong></p>
+                    </th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-header">
+            <h2>Coaching to Behavior - Coaching Topics</h2>
+        </div>
+        <div class="summary-table break">
+            <h3>Coaching to Behaviors - Visual Aids
+                <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
+                     src="http://www.oneupcoach.com/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg"
+                     alt="Horizon Icon" />
+            </h3>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not show visual aid on the majority of calls and is not confident with CVA/PI or clinical studies; have to remind or prompt TM to which visual aid he/she will use during pre-call planning</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally uses CVA, but is unaware of which piece to use based on the doctors adoption stage</p>
+
+                        <p>Uses CVA and various literature less than 50% of the time.&nbsp; Struggles with the use of PI during their calls</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM uses CVA effectively and various clinical pieces based on the doctor&rsquo;s adoption stage 75% of the time or greater</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently uses CVA/PI and various clinical reprints to effectively communicate a clinical message that resonates with the doctor to a call to action on treating patients with OA/RA and gastroprotection 100% of time</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM shows mastery of use of CVA/PI and clinical pieces and can clearly articulate a clinical message during the call and can adjust to HCP&rsquo;s needs on the spot with supported aids 100% of time</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Visual Aids score</span>
+                <span class="score">${(horizon_field_coaching_report.data.visual_aids)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.visual_aids_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Behaviors - Closing
+                <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
+                     src="http://www.oneupcoach.com/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg"
+                     alt="Horizon Icon" />
+            </h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not gain commitment on sales interactions&nbsp; and does not have a specific call to action.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally closes for commitment (25%),however needs to consistently do this more often. Closes should be a specific call to&nbsp; action.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM is effectively closing on the majority of the sales interactions (over 50%) and is gaining commitments, however during the field day their were still some opportunities missed where this behavior could be more consistent&nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently closes&nbsp; and gains commitment on almost every interaction (75%).</p>
+
+                        <p>The call to action is specific and moving the business forward on calls.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM always closes effectively on every interaction. TM has the ability to ask for a specific call to action to move the business forward on every call.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Visual Aides score</span>
+                <span class="score">${(horizon_field_coaching_report.data.closing)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.closing_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Behaviors - HorizonCares</h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not exemplify comfort or clarity when presenting/educating HorizonCares or addressing HorizonCares concerns from the office.&nbsp; TM doesn&rsquo;t demonstrate any knowledge of the flow of the RX via the total office call.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally introduces/educates HorizonCares, -however they aren&rsquo;t fully able to confidently explain,&nbsp; address concerns or issues that arise during the call.&nbsp; Has an idea of the flow of the Rx, however isn&rsquo;t confident and doesn&rsquo;t take proactive action to learn/confirm.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM can effectively introduce/educate HC after clinical conviction and handle issues that arise with confidence and conviction.&nbsp; TM demonstrates a good understanding of the flow of the RX via the total office call and educates office staff to submit RX with patient demographics with patient phone number and RX pharmacy card.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM demonstrates a higher proficiency discussing and presenting/educating HorizonCares after clinical conviction, including utilization of HC promo material and ensures dosing in EMR is confirmed via the office staff.&nbsp; Consistently confirms clinical conviction and uses that as the foundation to launch into HorizonCares.&nbsp; Consistently confirms the flow of the RX and educates office staff on OnePoint Patient Care and routinely checks in with office staff to see how they educate the patient.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM shows mastery of understanding, discussing and presenting/educating HorizonCares after clinical conviction.&nbsp; TM educates office staff on OnePoint Patient Care and establishes a relationship with the staff and the pharmacy on most sales calls.&nbsp; TM knows the flow of the RX and is ahead of any staff changes that take place in that flow.&nbsp; TM leads discussions and helps train others TMs on HorizonCares. TM uses Graveyard report to help office staff and fix root problem of RX&rsquo;s not submitted correctly.&nbsp;</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">HorizonCares score</span>
+                <span class="score">${(horizon_field_coaching_report.data.horizoncares)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.horizoncares_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Beheaviors - Maximizing Your Selling Day
+                <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
+                     src="http://www.oneupcoach.com/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg"
+                     alt="Horizon Icon" />
+            </h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not complete the following:&nbsp;</p>
+
+                        <p>- Avg Weekly Start and End Sample Call Times: 10am to 3:30am</p>
+
+                        <p>- Avg Weekly Calls/Sample Calls:&nbsp; below 12/below 6</p>
+
+                        <p>- Does not follow a routing plan or Veeva Call Cycle plan, has to be continually reminded to update routing</p>
+
+                        <p>- Educational Inservices 1-2 per week within Sunshine Act &amp; Corporate guidelines</p>
+
+                        <p>- Limited time to prospect due to inefficiencies with drive times</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally completes the following:&nbsp;</p>
+
+                        <p>- Avg Weekly Start and End Sample Call Times: 9:30am to 4pm</p>
+
+                        <p>- Avg Weekly Calls/Sample Calls: below 12/below 6</p>
+
+                        <p>- Work week calls align with Veeva Call Cycle Plan most of the time</p>
+
+                        <p>- Educational Inservices: 1-3 per week within Sunshine Act &amp; Corporate guidelines</p>
+
+                        <p>- Lacks consistency prospecting Time to Tgt Scores 7-10</p>
+
+                        <p>- Consistently having to remind the TM to update routing due to inefficiencies &nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM effectively completes the following:&nbsp;</p>
+
+                        <p>&nbsp;Avg Weekly Start and End Sample Call Times: 9am to 4:30pm</p>
+
+                        <p>- Avg Weekly Calls/Sample Calls: 12-13/7-8</p>
+
+                        <p>- Work week calls align with Veeva Call Cycle Plan.</p>
+
+                        <p>- Educational Inservices: 3-4 per week within Sunshine Act &amp; Corporate guidelines</p>
+
+                        <p>- Prospecting Time to Tgt Scores 7-10</p>
+
+                        <p>- Uses Phocus App&nbsp;</p>
+
+                        <p>- Strives for Quality and Quantity in their daily activities</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently completes the following:&nbsp;</p>
+
+                        <p>&nbsp;Avg Weekly Start and End Sample Call&nbsp; Times: 8:30an to 4:30pm</p>
+
+                        <p>- Avg Weekly Calls/Sample Calls: &gt;13/8-10</p>
+
+                        <p>- Work week calls align with Veeva Call Cycle Plan.</p>
+
+                        <p>- Educational Inservices: 5-6 per week with 1 inservice being a breakfast inservice within Sunshine Act and Corporate guidelines</p>
+
+                        <p>- Prospecting Time to Tgt Scores 7-10</p>
+
+                        <p>- Uses Phocus App&nbsp;</p>
+
+                        <p>- Strives for Quality and Quantity in their daily activities</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM always completes the following:&nbsp;</p>
+
+                        <p>- Avg Weekly Start and End Sample Call Times: 8am to 4:45pm</p>
+
+                        <p>- Avg Weekly Calls/Sample Calls: &gt;13/&gt;10</p>
+
+                        <p>- Work week calls align with Veeva Call Cycle Plan</p>
+
+                        <p>- Educational Inservices: &gt;6 per week with 2 inservices being a breakfast inservice within Sunshine Act &amp; Corporate guidelines</p>
+
+                        <p>- Prospecting Time to Tgt Scores 7-10</p>
+
+                        <p>- Uses Phocus App&nbsp;</p>
+
+                        <p>- Strives for Quality and Quantity in their daily activities</p>
+
+                        <p>- Achieves a CEO mindset with the use of their time to drive demand.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Maximizing Your Selling Day score</span>
+                <span class="score">${(horizon_field_coaching_report.data.maximizing_selling_day)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.selling_day_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Beheaviors -  Effective Clinical Messaging based on Adoption Cycle</h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not deliver (0-25% of time) an effective clinical messaging to drive HCP through each stage adoption cycle. Not confident with clinical studies (Precision Trial, Desai reprint, Risk By the Numbers flashcard or the GI Risk Assessment tool). TM rarely or does not move HCP to the next stage of the adoption cycle due to insufficient clinical knowledge and confidence. Resulting in lack of clinical conviction for GP/DVP.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally (&lt;50% if time) delivers a clinical messaging to drive HCP through each stage adoption cycle. Minimal&nbsp; confidence with clinical studies (Precision Trial, Desai reprint, Risk By the Numbers flashcard or the GI Risk Assessment tool). Occasionally moving HCP to the next stage of the adoption cycle. Needs more clinical knowledge to build confidence in messaging to become more persuasive.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM effectively (75% of time) delivers confident and persuasive clinical messaging in majority of calls to drive HCP through each stage adoption cycle. Has confidence with clinical studies (Precision Trial, Desai reprint, Risk By the Numbers flashcard, PI or the GI Risk Assessment tool). Shows the ability to move HCP to the next stage of the adoption cycle with effective closing. Need to be more consistent call to call delivering clinical messaging.&nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently (75% of time) delivers strong persuasive clinical messaging using the appropriate materials to move the HCP through the adoption cycle. Shows mastery of the clinical messaging with appropriate sales tools. Consistently checking for agreement with HCP through the call for belief in GP/DVP. Clearly understands HCP's needs in each step of the adoption cycle. HCP's consistently in agreement for the need in GP and DVP.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM always (100% of time) uses all resources available to deliver a strong clinical story.&nbsp; Uses the PI, CVA and other clinical studies to drive home gastroprotection for OA/RA Patients.&nbsp; TM does not move to product demonstrations until the HCP has complete buy in or change in habit for gastroprotecting their patients.&nbsp; TM can clearly articulate authors, dates and set up of clinical&rsquo;s to enforce the need for gastroprotection.&nbsp; Can teach others!</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Effective Clinical Messaging based on Adoption Cycle score</span>
+                <span class="score">${(horizon_field_coaching_report.data.effective_messaging)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.effective_mssg_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Beheaviors -  Targeting/Routing
+                <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
+                     src="http://www.oneupcoach.com/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg"
+                     alt="Horizon Icon" />
+            </h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not Target Effectively and does not have a routing set in place; have to remind or prompt TM to assess Funnel report to see more targets consistently.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally follows Routing and has some HIGH HCP targets routed, but is unaware of which targets should be called on Weekly/Bi-Weekly and Monthly. TM follows&nbsp; routing 50% of the time.&nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM has a an effective route in place and follows Weekly and Bi-Weekly Targets 75% of the time.&nbsp;</p>
+
+                        <p>TM calls on a handful of physicians consistently but there is room for improvement in targeting 7-10 targets. High Pot Calls &gt;55%</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM has the right amount of Weekly Targets and consistently follows the routing 75% or greater. Prospects on 7-10 targets consistently and continues to bring on new writers aligned to corporate strategy. High Pot Calls &gt;60% and Low Pot Calls &lt;30%</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM shows mastery of routing and follows routing 75% or greater.&nbsp; TM utilizes documents to keep track of Targeting Consistency to align their goals with company goals. High Pot Calls &gt;65% and Low Pot Calls &lt;25%</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Targeting/Routing score</span>
+                <span class="score">${(horizon_field_coaching_report.data.targeting_routing)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.targeting_rt_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Beheaviors - Meaningful Dialogue</h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not follow through with the pre-call strategy. Rarely engages the HCP.&nbsp; The call tends to only be delivering a features/benefit call.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally engages in meaningful dialogue by asking thought provoking declaratives. Sometimes lacks the confidence to ask or engage in the hard discussions to move the HCP along the adoption cycle.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM engages with HCP from the pre-call plan strategy and uses AOC to effectively engage in a two way dialogue that gets the HCP to think about the disease state and patients.&nbsp; Ultimately, strives to get the doctor to change a habit on most calls. &nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently challenges HCPs to think differently about how he/she prescribes NSAID&rsquo;s and can clearly articulate an AOC call and tell a story that engages the HCP and drives a call to action on how the HCP will view or change prescribing habits for patients at risk for NSAID induced upper GI ulcers.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM shows mastery of the sales call by getting HCP to engage in thought provoking&nbsp; discussions surrounding NSAIDS and gastroprotection that lead to a call for action immediately following the call.&nbsp; HCP changes habit based on call.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Meaningful Dialogue score</span>
+                <span class="score">${(horizon_field_coaching_report.data.meaningful_dialogue)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.dialogue_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table break">
+            <h3>Coaching to Beheaviors - Pre-call Planning using the Adoption Cycle
+                <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
+                     src="http://www.oneupcoach.com/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg"
+                     alt="Horizon Icon" />
+            </h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not or rarely (0-25% of time) recollect previous calls to gain insight into current disease state / product knowledge or determine the rate at which the HCP chooses DV for appropriate OA/RA patients and P for appropriate OA knee pain patients. Not clear on which stage of the adoption cycle they are in to prepare the right clinical message with appropriate marketing materials. Have to remind or prompt TM to which visual aid to use during pre-call planning.&nbsp; TM not meeting expectations in precall planning.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM occasionally (&lt;50% of time) recollects previous calls to gain insight into current disease state/product knowledge using veeva &amp; sales reports to determine the rate at which the HCP chooses DV for appropriate OA/RA patients and P for appropriate OA knee pain patients. Has a basic understanding of what stage of the adoption cycle they are in to provide prepare the right clinical message with the appropriate marketing materials. Have to help TM decide which visual aid to use less than 50% of the time.&nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM (75% of time) understands&nbsp; which stage of the adoption cycle the HCP&rsquo;s are in using post call notes, veeva and sales reports. TM understands where HCP utilizes DVP and opportunities for growth based on data. TM effectively prepares&nbsp; appropriate message with appropriate marketing materials based on where HCP is in adoption cycle 75% of the time or greater. TM meeting expectations in precall planning.&nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently (&gt;75% of time) demonstrates a clear understanding of where HCP&rsquo;s are in the adoption cycle and has a precall plan prepared and aligned&nbsp; for calls using the appropriate marketing materials. TM clearly understands where HCP uses DVP and the opportunities for growth based on sales data over &gt;75% of the time. TM fully prepared to grow DVP business in these calls. TM exceeds expectations in precall planning.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM shows confidence (100% of time) in precall planning for calls based on where HCP is in the adoption cycle. TM always has precall plans written out for each HCP in route for the day.&nbsp; TM prepares the appropriate message with the appropriate marketing materials for each call. TM consistently prepares&nbsp; call to grow DVP with a clear understanding of where growth is attainable using all sales data available. TM consistently exceeds expectations in precall planning.</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Pre-call Planning using the Adoption Cycle score</span>
+                <span class="score">${(horizon_field_coaching_report.data.precall_planning)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.precall_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="summary-table">
+            <h3>Coaching to Beheaviors - Relationship Edge</h3>
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <p>TM does not have a relationship with HCPs or office staff.&nbsp; TM isn&rsquo;t familiar with the staff and doesn&rsquo;t make an attempt to engage them or know their names.&nbsp; Interactions are short and don&rsquo;t go past &ldquo;Hi, what do you have?&rdquo;&nbsp; The TM would be considered at level 1 on the relationship pyramid, People who don&rsquo;t know you by name.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM has a relationship with some offices however there are still a lot of offices that the lack of relationship is evident.<strong> </strong>TM occasionally demonstrates the TOC call and&nbsp; doesn&rsquo;t fully understand the TOC.&nbsp; Very few offices exhibit trust with TM and few offices know TM by first name.</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM effectively demonstrates key traits for relationship building, listening, attentiveness, questioning and demonstrates understanding of customers questions and concerns.&nbsp; TM is able to utilize the TOC in order to better learn and build advocates with HCPs and staff.&nbsp; TM is generally liked by most accounts and is known by first name in offices visited</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM consistently demonstrates key traits for relationship building but has a higher than average ability to quickly advance relationships up the relationship edge pyramid.&nbsp; The majority of their relationships are in level 5 (people who have a genuine respect for you). &nbsp;</p>
+                    </td>
+                    <td valign="top">
+                        <p>TM demonstrates all the key traits needed to build strong relationship with offices and HCPs on&nbsp; a consistent basis.&nbsp; TM is not only able to demonstrate but is able to work with other TMs to teach them the how to advance relationships.&nbsp; TMs relationships with the majority of their offices, is at level 6 (people value a relationship with them).</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Relationship Edge score</span>
+                <span class="score">${(horizon_field_coaching_report.data.relationship_edge)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.relationship_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
+        <div class="total-score">
+            <span class="label">Coaching Topics - Total Score</span>
+            <span class="score">${(horizon_field_coaching_report.data.avg_score)!"Unknown"}</span>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
