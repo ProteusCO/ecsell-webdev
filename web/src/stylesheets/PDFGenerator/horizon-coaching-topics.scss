@@ -24,8 +24,8 @@
 
 @page {
   size: 11.25in 8.75in;
-  /* 8.5x11 + 0.125 bleed area on each edge */
-  margin: 0.5in;
+  margin: 0.45in;
+
   @bottom-right-corner {
     content: counter(page);
     font-size: 12px;
@@ -128,8 +128,9 @@ h1 {
   width: 45%;
 }
 
-.summary-table.break {
-  page-break-after: always;
+.summary-table.break h3,
+.section-header.break {
+  page-break-before: always;
 }
 
 .summary-table table {
@@ -224,6 +225,10 @@ h1 {
 
 .smart .entry {
   margin-bottom: 8px;
+}
+
+.metrics-summary.break {
+  page-break-before: always;
 }
 
 .metrics-summary,

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Horizon FCR Coaching Topics</title>
-    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1091663z96b4c8b7/_fn/horizon-coaching-topics.css" type="text/css" />
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1091778z19bf4a49/_fn/horizon-coaching-topics.css" type="text/css" />
 </head>
 <body>
 <div class="rep-activity-main">
@@ -80,7 +80,7 @@
             </div>
         </div>
 
-        <div class="metrics-summary">
+        <div class="metrics-summary break">
             <h3>Territory KPI's</h3>
             <table cellpadding="0" cellspacing="0" style="width:100%;">
                 <tbody>
@@ -124,32 +124,43 @@
 
         </div>
 
-        <div class="action-activity-summary">
+        <div class="action-activity-summary sample-calls">
             <table cellpadding="0" cellspacing="0" style="width: 100%;">
                 <tbody>
                 <tr>
-                    <th style="text-align:left;"><strong>Activity (4 wk avg)</strong></th>
-                    <th><strong>TM</strong></th>
-                    <th><strong>Top 40 Avg.</strong></th>
-                    <th colspan="3"><strong>Distribution of Calls Made (Last 4 Weeks)</strong></th>
-                    <th rowspan="2"><strong>% Low Pot Non Writer</strong></th>
+                    <th class="first">&nbsp;</th>
+                    <th><strong>13 Wk Avg DVP</strong></th>
+                    <th><strong>13 Wk Avg First Sample Call</strong></th>
+                    <th><strong>13 Wk Avg Last Sample Call</strong></th>
                 </tr>
                 <tr>
-                    <td style="text-align:left;"><strong>Calls / Day</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_tm)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_calls_top_40_avg)!"Unknown"}</strong></td>
-                    <th><strong>High Pot %</strong></th>
-                    <th><strong>Med Pot %</strong></th>
-                    <th><strong>Low Pot %</strong></th>
+                    <td class="first"><strong>Sample Calls / Day</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.avg_dvp)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.avg_first_sample_call)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.avg_last_sample_call)!"Unknown"}</strong></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="action-activity-summary dist-calls">
+            <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                <tbody>
+                <tr>
+                    <th class="first">&nbsp;</th>
+                    <th><strong>TS 10</strong></th>
+                    <th><strong>TS 7 - 9</strong></th>
+                    <th><strong>TS 1 - 6</strong></th>
+                    <th><strong>TS 0</strong></th>
+                    <th><strong>% Calls to Non Writers</strong></th>
                 </tr>
                 <tr>
-                    <td style="text-align:left;"><strong>Samp / Day</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_tm)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_top_40_avg)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_high_pot)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_med_pot)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_low_pot)!"Unknown"}</strong></td>
-                    <td><strong>${(horizon_field_coaching_report.data.activity_samp_non_writer)!"Unknown"}</strong></td>
+                    <td class="first"><strong>Distribution of Calls Made as a % of Total Calls QTD</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.ts_10)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.ts_7_9)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.ts_1_6)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.ts_0)!"Unknown"}</strong></td>
+                    <td><strong>${(horizon_field_coaching_report.data.calls_non_writers)!"Unknown"}</strong></td>
                 </tr>
                 </tbody>
             </table>
@@ -284,10 +295,10 @@
             </table>
         </div>
 
-        <div class="section-header">
+        <div class="section-header break">
             <h2>Coaching to Behavior - Coaching Topics</h2>
         </div>
-        <div class="summary-table break">
+        <div class="summary-table">
             <h3>Coaching to Behaviors - Visual Aids
                 <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
                      src="http://www.oneupcoach.com/_resources/dyn/files/1091546zd6aee0e3/_fn/horizon-fcr-head-lightbulb.jpg"
@@ -779,7 +790,7 @@
             </div>
         </div>
 
-        <div class="summary-table">
+        <div class="summary-table break">
             <h3>Coaching to Beheaviors - Relationship Edge</h3>
             <table cellpadding="0" cellspacing="0">
                 <tbody>

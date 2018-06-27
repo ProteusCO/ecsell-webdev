@@ -307,13 +307,33 @@
 
 	}
 
-	.horizon-product-metrics-summary,
+	.horizon-product-metrics-summary {
+		td:not(:first-of-type) {
+			width: 19%;
+		}
+	}
+
 	.horizon-activity-metrics-summary {
+		td:not(:first-of-type) {
+			width: 25%;
+		}
+	}
+
+	.horizon-distribution-calls-summary {
+		td:not(:first-of-type) {
+			width: 15%;
+		}
+	}
+
+	.horizon-product-metrics-summary,
+	.horizon-activity-metrics-summary,
+	.horizon-distribution-calls-summary {
 		td {
 			text-align: center;
 
 			&:first-of-type {
 				text-align: left;
+				width: 20%;
 			}
 		}
 	}
