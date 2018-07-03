@@ -24,8 +24,8 @@
 
 @page {
   size: 11.25in 8.75in;
-  /* 8.5x11 + 0.125 bleed area on each edge */
-  margin: 0.5in;
+  margin: 0.45in;
+
   @bottom-right-corner {
     content: counter(page);
     font-size: 12px;
@@ -128,8 +128,9 @@ h1 {
   width: 45%;
 }
 
-.summary-table.break {
-  page-break-after: always;
+.summary-table.break h3,
+.section-header.break {
+  page-break-before: always;
 }
 
 .summary-table table {
@@ -226,6 +227,10 @@ h1 {
   margin-bottom: 8px;
 }
 
+.metrics-summary.break {
+  page-break-before: always;
+}
+
 .metrics-summary,
 .action-activity-summary {
   margin-top: 20px;
@@ -242,7 +247,7 @@ h1 {
 
 .metrics-summary th,
 .metrics-summary td {
-  width: 2.25in;
+  width: 2.025in;
 }
 
 .metrics-summary th,
@@ -257,4 +262,14 @@ h1 {
   border: 1px solid #062B47;
   padding: 10px;
   border-collapse: collapse;
+}
+
+.action-activity-summary.sample-calls th,
+.action-activity-summary.sample-calls td {
+  width: 2.7in;
+}
+
+.action-activity-summary.dist-calls th,
+.action-activity-summary.dist-calls td {
+  width: 1.62in;
 }
