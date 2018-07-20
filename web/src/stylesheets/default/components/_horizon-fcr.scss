@@ -208,6 +208,40 @@
 		}
 	}
 
+	.question.observation-days {
+		margin: 1.25rem 0 1rem;
+
+		.form_field.prop-group>section>.prop-group-title,
+		.form_field.prop-group>section>.props {
+			width: auto;
+			text-align: left;
+			padding: 0;
+			margin: 0 5px 0 0;
+			vertical-align: middle;
+
+			h1 {
+				margin-bottom: 0;
+			}
+		}
+
+		.form_field.prop-group > .props {
+			margin-bottom: 1.75rem;
+
+			label,
+			.extra_value_renderer {
+				width: auto;
+				padding: 0;
+				margin: 0;
+				text-align: left;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 3px;
+			}
+		}
+	}
+
 	.horizon-smart {
 
 		.question {
