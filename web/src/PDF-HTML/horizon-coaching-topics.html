@@ -184,6 +184,17 @@
                 </tr>
                 <tr>
                     <td valign="top" class="first">
+                        <p><strong>Coaching to Behaviors - Sales Performance</strong></p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.sales_performance)!"Unknown"}</p>
+                    </td>
+                    <td valign="top">
+                        <p>${(horizon_field_coaching_report.data.s_performance_recommendation)!"Unknown"}</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="first">
                         <p><strong>Coaching to Behaviors - Visual Aids</strong></p>
                     </td>
                     <td valign="top">
@@ -299,6 +310,76 @@
         <div class="section-header break">
             <h2>Coaching to Behavior - Coaching Topics</h2>
         </div>
+
+        <div class="summary-table">
+            <h3>Coaching to Behaviors - Sales Performance</h3>
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>1<br />
+                            Does Not Meet Expectations</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>2<br />
+                            Needs Improvement</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>3<br />
+                            Meets Expectations</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>4<br />
+                            Exceeds Expectations</strong></p>
+                    </th>
+                    <th valign="top">
+                        <p style="text-align: center;"><strong>5<br />
+                            Consistently Exceeds Expectations</strong></p>
+                    </th>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <ul>
+                            <li>TM is currently <strong>> -10% below baseline for Target Score 7-10</strong> providers</li>
+                            <li>TM is currently <strong>> -8% below Total baseline</strong></li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <ul>
+                            <li>TM is currently <strong> > -1% to -10% below baseline for Target Score 7-10</strong></li>
+                            <li>TM is currently <strong> > -1% to -8% below Total baseline</strong></li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <ul>
+                            <li>TM is trending <strong>above Target Score 7-10 baseline and Total baseline up to +5%</strong></li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <ul>
+                            <li>TM is currently<strong> > +5% to +10% above baseline for Target Score 7-10</strong></li>
+                            <li>TM is currently<strong> > +5% to +8% above Total baseline</strong></li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+                        <ul>
+                            <li>TM is currently<strong> > +10% above baseline for Target Score 7-10</strong></li>
+                            <li>TM is currently<strong> > +8% above Total baseline</strong></li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="score-con">
+                <span class="label">Sales Performance score</span>
+                <span class="score">${(horizon_field_coaching_report.data.sales_performance)!"Unknown"}</span>
+            </div>
+            <div class="recco-con">
+                <span class="label">Recommendation</span>
+                <span class="score">${(horizon_field_coaching_report.data.s_performance_recommendation)!"Unknown"}</span>
+            </div>
+        </div>
+
         <div class="summary-table">
             <h3>Coaching to Behaviors - Visual Aids
                 <img style="width:35px; height: 35px; margin-left:8px; vertical-align: middle;"
