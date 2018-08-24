@@ -22,8 +22,14 @@
       padding-top: 0;
 
       &.tbl {
-        display: inline-block;
+        display: inline;
         width: auto;
+      }
+    }
+
+    div.extra_value_renderer_editable {
+      .edit.plan & {
+        width: 100%;
       }
     }
 

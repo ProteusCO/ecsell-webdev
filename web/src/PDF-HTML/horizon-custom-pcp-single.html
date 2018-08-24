@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+[#setting time_zone="UTC"]
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>${(activity_instance.activity_name)!""}</title>
+    <link media="all" rel="stylesheet" href="http://www.oneupcoach.com/_resources/dyn/files/1079184ze998f091/_fn/joint-activity.css" type="text/css" />
+</head>
+<body>
+<div class="rep-activity-main">
+    <div class="activity-instance-editor">
+        <div class="activity-instance-editor title">
+            <img src="http://www.oneupcoach.com/_resources/dyn/files/14109zb0fded96/_fn/pdflogo.png" alt="One-Up powered by EcSell Institute" class="ecsell"/><h1>${activity_instance.activity_name!""}</h1>
+        </div>
+    </div>
+</div>
+<table class='activity-info'>
+    <tr><td>
+        <table class='left'>
+            <tr>
+                <td class='label'>
+                    ${(activity_instance.by.position)!"Manager"}:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.by.name.first)!"Unknown"} ${(activity_instance.by.name.last)!"Unknown"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Team Member:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.for.name.first)!"Unknown"} ${(activity_instance.for.name.last)!"Unknown"}
+                </td>
+            </tr>
+        </table></td><td>
+        <table class='right'>
+            <tr>
+                <td class='label'>
+                    Due Date:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.due_date)!"West Pharma"}
+                </td>
+            </tr>
+            <tr>
+                <td class='label'>
+                    Date Completed:
+                </td>
+                <td class='val'>
+                    ${(activity_instance.date)!"Unknown"}
+                </td>
+            </tr>
+        </table></td></tr>
+</table>
+
+<div class="joint-activity" >
+    <div class="joint-activity-content" >
+        <h2 class="joint-event-company-name">${(Horizon_CPCP.data.company_visited)!"Unknown"}</h2>
+        <div class="question"><span class="label">Practice Name</span><span class="val">${(Horizon_CPCP.data.company_visited)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Date of Call</span><span class="val">${(Horizon_CPCP.data.event_date?string["MMM d, yyyy"])!"Unknown"}</span></div>
+        <div class="question"><span class="label">HCP Name</span><span class="val">${(Horizon_CPCP.data.atype)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Target Score</span><span class="val">${(Horizon_CPCP.data.tscore)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Field Visit of DM</span><span class="val">${(Horizon_CPCP.data.date?string["MMM d, yyyy"])!"Unknown"}</span></div>
+        <div class="instructions" style="margin-top: 32px;">
+            <p><strong>4 wk TRx Change</strong> (To find this data go to “Territory Weekly Report” >> Select the “HCP Tracking” Tab >> Find HCP desired >> Go to “Select Product” drop down box and choose product you are looking for >> Look for 4 wk TRX Chg)</p>
+        </div>
+        <div class="question"><span class="label">Duexis</span><span class="val">${(Horizon_CPCP.data.d4trx)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Vimovo</span><span class="val">${(Horizon_CPCP.data.d13trx)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Pennsaid 2%</span><span class="val">${(Horizon_CPCP.data.v4trx)!"Unknown"}</span></div>
+        <div class="question"><span class="label">DVP Total</span><span class="val">${(Horizon_CPCP.data.v13trx)!"Unknown"}</span></div>
+        <div class="instructions" style="margin-top: 32px;">
+            <p><strong>13 wk TRx Change</strong> (To find this data go to “Territory Weekly Report” >> Select the “HCP Tracking” Tab >> Find HCP desired >> Go to “Select Product” drop down box and choose product you are looking for >> Look for 13 wk TRX Chg)</p>
+        </div>
+        <div class="question"><span class="label">Duexis</span><span class="val">${(Horizon_CPCP.data.p4wk)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Vimovo</span><span class="val">${(Horizon_CPCP.data.p13wk)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Pennsaid 2%</span><span class="val">${(Horizon_CPCP.data.d4wk)!"Unknown"}</span></div>
+        <div class="question"><span class="label">DVP Total</span><span class="val">${(Horizon_CPCP.data.d13wk)!"Unknown"}</span></div>
+        <div class="instructions" style="margin-top: 32px;">
+            <p><strong>13 wk Rolling Avg. TRx</strong> (Go to Veeva Main Page for the HCP desired >> Look at Oral and Topical NSAID Market Commercial TRX – Rolling 13 Weeks Avg.)</p>
+        </div>
+        <div class="question"><span class="label">Orals Total</span><span class="val">${(Horizon_CPCP.data.otot)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Duexis</span><span class="val">${(Horizon_CPCP.data.duexis)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Vimovo</span><span class="val">${(Horizon_CPCP.data.vimovo)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Topical Total</span><span class="val">${(Horizon_CPCP.data.toptot)!"Unknown"}</span></div>
+        <div class="question"><span class="label">PENNSAID 2%</span><span class="val">${(Horizon_CPCP.data.pennsaid)!"Unknown"}</span></div>
+
+        <div class="question"><span class="label">What stage is the HCP in the Adoption Cycle ?</span><span class="val">${(Horizon_CPCP.data.what_stage)!"Unknown"}</span></div>
+        <div class="question"><span class="label">What core resources will be used?</span><span class="val">${(Horizon_CPCP.data.resources)!"Unknown"}</span></div>
+        <div class="question"><span class="label">Why/What is the goal/objective of the call?</span><span class="val">${(Horizon_CPCP.data.notes)!"Unknown"}</span></div>
+    </div>
+</div>
+
+</body>
+</html>
